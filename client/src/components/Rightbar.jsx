@@ -47,8 +47,8 @@ const Rightbar = () => {
         </Typography>
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
           {itemData.map((item) => (
-            <Box>
-              <ImageListItem key={item.img}>
+            <Box key={item.img}>
+              <ImageListItem>
                 <img
                   src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
                   srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
