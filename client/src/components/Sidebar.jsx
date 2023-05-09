@@ -16,7 +16,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import NightsStayIcon from "@mui/icons-material/NightsStay";
+/* import NightsStayIcon from "@mui/icons-material/NightsStay"; */
 
 const Sidebar = () => {
   return (
