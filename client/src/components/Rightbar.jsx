@@ -2,16 +2,16 @@ import {
   Avatar,
   AvatarGroup,
   Box,
-  IconButton,
-  ImageListItemBar,
+/*   IconButton,
+  ImageListItemBar, */
   Typography,
 } from "@mui/material";
-import { red } from "@mui/material/colors";
+/* import { red } from "@mui/material/colors"; */
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import React from "react";
 import IMAGES from "../images/avatar";
-import WebIcon from "@mui/icons-material/Web";
+/* import WebIcon from "@mui/icons-material/Web"; */
 
 const Rightbar = () => {
   return (
