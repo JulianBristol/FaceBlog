@@ -1,6 +1,7 @@
 import {
     Avatar,
     Box,
+    Button,
     Card,
     CardActions,
     CardContent,
@@ -18,11 +19,12 @@ import {
   import FavoriteIcon from "@mui/icons-material/Favorite";
   import ShareIcon from "@mui/icons-material/Share";
   import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-  import JuDev_Image from "../../images/feed-images/JuDev2.png";
+  import TextTruncate from 'react-text-truncate';
   import ProfilePicture from "../../images/avatar/Profile Picture.jpg";
   import posts from "../../posts.json";
   import { useState } from "react";
   import makeStyles from "./styles";
+import PostDescriptions from "./PostDescriptions";
   
   const Posts = () => {
     const classes = makeStyles();
@@ -55,17 +57,17 @@ import {
 const imgArrPositioning = [ 
     [{row: 4, col: 4}],
     [{row: 2, col: 2}, {row: 2, col: 2}],
-    [{row: 2, col: 2}, {row: 1, col: 2}, {row: 1, col: 2}],
+    [{row: 2, col: 2}, {row: 2, col: 1}, {row: 2, col: 1}],
     [{row: 2, col: 2}, {row: 1, col: 1}, {row: 1, col: 1}, {row: 1, col: 2}],
 ];
 
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
-    src: `${image}?w=${size * cols}%&h=${size * rows}%&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}%&h=${
+    src: `${image}`/* ?w=${size * cols}%&h=${size * rows}%&fit=crop&auto=format */,
+    /* srcSet: `${image}?w=${size * cols}%&h=${
       size * rows
-    }%&fit=crop&auto=format&dpr=2 2x`,
+    }%&fit=crop&auto=format&dpr=2 2x`, */
   };
 }
 
@@ -79,7 +81,7 @@ function QuiltedImageList({itemData}) {
     >
       {itemData.map((item, key) => {
         return (
-        <ImageListItem key={item.img} cols={imgArrPositioning[variant][key].col || 1} rows={imgArrPositioning[variant][key].row || 1}>
+        <ImageListItem key={key} cols={imgArrPositioning[variant][key].col || 1} rows={imgArrPositioning[variant][key].row || 1}>
           <img
             {...srcset(item.img, 121, imgArrPositioning[variant][key].row, imgArrPositioning[variant][key].col)}
             alt={item.title}
@@ -124,16 +126,12 @@ function QuiltedImageList({itemData}) {
                     <QuiltedImageList itemData={post.itemData}/>
                   </CardMedia>
                   <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                      This was my first time working with Mui and only my second time
-                      completing a React project. As you could imaging, it was fairly
-                      challenging to complete. I had a lot of trouble fixing the several
-                      errors that I made in the code but as time went on, things became much
-                      easier. I found myself falling in love with both React and Mui. I want
-                      to learn more about it and create more projects. As my portfolio
-                      grows, I know that I will become a much better programmer, not only in
-                      with React, but with all programming languages.
+                    <PostDescriptions texts={post.description} />
+                    {/* {post.description.map((item, key) => (
+                    <Typography key={key} variant="body2" color="text.secondary" style={{ marginTop: '20px' }}>
+                      {post.description[key]}
                     </Typography>
+                    ))} */}
                   </CardContent>
                   <CardActions disableSpacing>
                     <Checkbox

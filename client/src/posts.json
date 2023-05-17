@@ -4,39 +4,75 @@
         "title": "My First MUI Project",
         "date": "August 8th, 2022",
         "itemData": [
-          "image1",
-          "image2"
+            {
+                "img": "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+                "title": "Basketball"
+              },
+              {
+                  "img": "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+                  "title": "Basketball"
+                }
         ],
-        "text": "This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."
+        "description": ["This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."],
+        "tech": "",
+        "learned": "",
+        "LiveLink": "",
+        "github": ""
+    },
+    {
+        "type": "portfolio",
+        "title": "Searcy Water Utilities",
+        "date": "April 25th 2023",
+        "itemData": [
+            {
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/SearcyWaterUtilities_bxcxsh.png",
+            "title": "Searcy Water Utilities preview"
+          }
+        ],
+        "description": [
+            "This was my first big project without any type of safety net, and boy, did it come with its share of challenges! Getting started was tough, I quickly learned the importance of capturing every single last important detail about why a software product is being created. I didn’t have access to the stakeholders during the planning and design portion of creating the website. Actually, I have never spoken with them in person, on the phone, or by email. My contact with them was through my friend and collaborator on the project, Zach Burns, but more on him later. It felt like the stakeholders didn't care much about what I was producing, although in hindsight, that's definitely not true. Nevertheless, looking back at my original design, I can't help but feel disappointed. If I was a stakeholder, I would have expected a better design and placed more input on the sections and content that I wanted. But I can't really blame them, since they didn't really know what they wanted, and even if they did, they struggled in expressing it.",
+            "Zach acted as the intermediary between the stakeholders and me. He primarily handled the backend tasks, such as setting up the MongoDB server-side code and the admin portal. Working with him was amazing, and I'd gladly do it again. He was incredibly helpful in two ways: bouncing ideas off him and just shooting the breeze (hey, I'm human, I need to relieve stress in a healthy way).",
+            "Once we finalized some components, we dove into coding. I focused mainly on the frontend, working on the design, responsiveness, and functionality of the website. But after a while, I had to step back and ask myself why I wasn't satisfied with the site. I still struggle to put my feelings into words, but during that time, there were drastic changes. That's when I realized that I was using my original design as a loose guideline and testing the look and feel of page components in code as I went along.",
+            "That was a massive mistake that I'll never make again. It ended up being the most time-consuming part of the project because CSS can be a beast to tame when you're trying to bring vague ideas to life. The process was simple but time-consuming: Think of a change, code the change, wonder why it didn't work, research the bug or issue, fix it, realize that my change wasn't quite right or was overengineered, and repeat. I must have gone through this cycle 5-6 times for some components before giving up. In the end, I remembered my training from school and started spending more time researching how components look and function on different websites before diving into Figma to edit designs. I estimate that this approach saved the project at least 6 months of work and likely saved me a hefty therapist bill.",
+            "Once I had a solid, reusable design in place, productivity shot through the roof. Where it would take me a week or more to create a single component on the page, I could code 2-3 pages in a day. Towards the end of the project, the biggest time sink was less the coding and more waiting for the stakeholders to get us the information that we needed to build additional pages.",
+            "An important decision that we made was creating a list of stretch goals to manage scope creep. Whenever we came up with a change or additional feature that seemed interesting, we'd discuss its feasibility, time frame, and necessity. If it didn't pass muster in any of those areas, we tossed it into the stretch goal pool, leaving it up to the stakeholders to make a decision on it.",
+            "As of April 25th 2023, this is my most educational project. It deepened my knowledge of CSS and JavaScript, reiterated the importance of the design and planning stages of the SDLC, gave me several hands-on examples of how important it is to have access to stakeholders, and displays my skills to myself and future employers. Despite encountering setbacks along the way, I've turned those challenges into valuable lessons and transformed hard work into success. While there may be more tweaks I could make to the page, I'm incredibly proud of the growth I've seen in my coding and design skills. It's been a journey of turning pressure into diamonds and I'm thrilled with the progress I've made!"
+        ],
+        "tech": "CSS, MUI, MongoDB, Express, React, Node",
+        "learned": "",
+        "LiveLink": "",
+        "github": ""
     },
     {
         "type": "twitter",
         "title": "My First MUI Project",
         "date": "2022-08-04T00:00:00.000Z",
         "itemData": [
-          "image1",
-          "image2"
+            {
+              "img": "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+              "title": "Bike"
+            }
         ],
-        "text": "This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."
+        "description": ["This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."],
+        "tech": "",
+        "learned": "",
+        "LiveLink": "",
+        "github": ""
     },
     {
-        "type": "twitter",
+        "type": "portfolio",
         "title": "My First MUI Project",
-        "date": "2022-08-04T00:00:00.000Z",
+        "date": "August 8th, 2022",
         "itemData": [
-          "image1",
-          "image2"
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356244/FaceBlog%20App/JuDev2.png",
+              "title": "FaceBlog React Project"
+            }
         ],
-        "text": "This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."
-    },
-    {
-        "type": "twitter",
-        "title": "My First MUI Project",
-        "date": "2022-08-04T00:00:00.000Z",
-        "itemData": [
-          "image1",
-          "image2"
-        ],
-        "text": "This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."
+        "description": ["This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."],
+        "tech": "",
+        "learned": "",
+        "LiveLink": "",
+        "github": ""
     }
 ]
