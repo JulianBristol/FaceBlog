@@ -29,7 +29,7 @@ const Post = () => {
       <CardHeader
         avatar={
           <Avatar
-            sx={{ bgcolor: "red" }}
+            sx={{ bgcolor: "gray" }}
             alt="Julian Bristol"
             src={ProfilePicture}
             aria-label="recipe"
@@ -43,7 +43,7 @@ const Post = () => {
           </IconButton>
         }
         title="JuDev Website - My First Mui Project"
-        subheader="August 4th, 2023"
+        subheader="August 4th, 2022"
       />
       <CardMedia
         component="img"

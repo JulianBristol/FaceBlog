@@ -47,9 +47,9 @@ const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          JuDev
+        FaceBlog
         </Typography>
-        <Tooltip title="JuDev">
+        <Tooltip title="FaceBlog">
           <DeveloperModeIcon sx={{ display: { xs: "block", sm: "none" } }} />
         </Tooltip>
         <Box sx={{ width: "40%" }}>
