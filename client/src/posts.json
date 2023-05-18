@@ -67,6 +67,10 @@
             {
               "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356244/FaceBlog%20App/JuDev2.png",
               "title": "FaceBlog React Project"
+            },
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684427835/FaceBlog%20App/Screenshot_2023-05-18_123640_jfdjpe.png",
+              "title": "FaceBlog React Project"
             }
         ],
         "description": ["This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."],

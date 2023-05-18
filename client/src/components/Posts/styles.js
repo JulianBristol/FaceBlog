@@ -17,4 +17,10 @@ export default makeStyles((theme) => ({
     textTruncate: {
         whiteSpace: 'pre-line',
     },
+    icons: {
+        transition: 'all 0.5s ease !important',
+        '&:hover': {
+            color: 'black'
+        },
+    }
 }));

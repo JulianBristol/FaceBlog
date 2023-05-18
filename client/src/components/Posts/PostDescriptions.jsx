@@ -22,9 +22,9 @@ const PostDescriptions = ({texts}) => {
           element="p"
           truncateText="…"
           text={text}
-          textTruncateChild={<div><Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)' }}>
+          textTruncateChild={<span><br/><Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)' }}>
                   {truncated ? "See More" : "See Less"}
-                  </Button></div>}
+                  </Button></span>}
         />
       </div>
       <Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)', display: `${truncated ? 'none' : 'block' }` }}>

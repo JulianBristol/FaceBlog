@@ -1,7 +1,5 @@
 import {
     Avatar,
-    Box,
-    Button,
     Card,
     CardActions,
     CardContent,
@@ -18,8 +16,9 @@ import {
   import MoreVertIcon from "@mui/icons-material/MoreVert";
   import FavoriteIcon from "@mui/icons-material/Favorite";
   import ShareIcon from "@mui/icons-material/Share";
+  import WebIcon from '@mui/icons-material/Web';
+  import GitHubIcon from '@mui/icons-material/GitHub';
   import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-  import TextTruncate from 'react-text-truncate';
   import ProfilePicture from "../../images/avatar/Profile Picture.jpg";
   import posts from "../../posts.json";
   import { useState } from "react";
@@ -30,8 +29,9 @@ import PostDescriptions from "./PostDescriptions";
     const classes = makeStyles();
     //Check if icon is checked
     const [checked, setChecked] = useState(false);
-    const handleClick = (() => {
+    const handleAction = ((liveLink, github) => {
         console.log("handleClick");
+        console.log(liveLink, github);
     })
 
     const profiles = {
@@ -113,13 +113,36 @@ function QuiltedImageList({itemData}) {
                       </Tooltip>
                     }
                     action={
-                      <IconButton title="More Options" aria-label="settings" onClick={() => {
-                        handleClick();
+                      <IconButton className={classes.icons} title="More Options" aria-label="settings" onClick={() => {
+                        handleAction(post.LiveLink, post.github);
                       }}>
                         <MoreVertIcon />
                       </IconButton>
                     }
-                    title={post.title}
+                    title={
+                    <div>
+                      {post.title}
+                      {post.LiveLink === '' && post.github === '' ? '' : 
+                      <span>
+                        <br/>
+                    {post.LiveLink === '' ? '' : 
+                      <IconButton className={classes.icons} title="View Website" aria-label="see Website" onClick={() => {
+                          window.open(post.LiveLink, '_blank');
+                        }}
+                        >
+                          <WebIcon />
+                      </IconButton>
+                    }
+                    {post.github === '' ? '' : 
+                      <IconButton className={classes.icons} title="View Github link" aria-label="see Github" 
+                      onClick={() => {
+                        window.open(post.github, '_blank');
+                      }}>
+                          <GitHubIcon />
+                      </IconButton>
+                    }
+                      </span>}
+                    </div>}
                     subheader={post.date}
                   />
                   <CardMedia>
@@ -127,6 +150,9 @@ function QuiltedImageList({itemData}) {
                   </CardMedia>
                   <CardContent style={{ padding: '20px 35px 0px' }}>
                     <PostDescriptions texts={post.description} />
+                    <br/>
+                    {post.tech === '' ? '' : <Typography variant="body2">Tech Used: {post.tech}</Typography>}
+                    {post.learned === '' ? '' : <Typography variant="body2">What I learned: {post.learned}</Typography>}
                   </CardContent>
                   <CardActions disableSpacing>
                     <Checkbox
