@@ -13,5 +13,8 @@ export default makeStyles((theme) => ({
         '& .MuiCardHeader-title':{
         fontSize: '1.2rem',
         }
-    }
+    },
+    textTruncate: {
+        whiteSpace: 'pre-line',
+    },
 }));

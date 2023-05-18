@@ -1,46 +1,47 @@
-import { Button, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import React, { useState } from 'react'
 import TextTruncate from 'react-text-truncate';
+import makeStyles from "./styles";
 
-/* const Test = ({text}) => {
-    return (
-        <>
-        {text.map((item, key) => (
-            <Typography key={key} variant="body2" color="text.secondary" style={{ marginTop: '20px' }}>
-                {text[item]}
-            </Typography>
-        ))}
-        </>
-    )} */
 const PostDescriptions = ({texts}) => {
-    const [truncated, setTruncated] = useState(true);
-    /* const test = () => {
-        <>
-        {texts.map((text, key) => (
-                <Typography key={key} variant="body2" color="text.secondary" style={{ marginTop: '20px' }}>
-                    {text}
-                    {console.log(text)}
-                </Typography>
-            ))}
-            </>
-    } */
+  const classes = makeStyles();
 
-    const test = () => {
-        return (
-        <>
-        <p>{texts}</p>
-        </>
-    )}
+    const [truncated, setTruncated] = useState(true);
     const toggleTruncate = () => {
       setTruncated(!truncated);
     };
+
+    const text = texts.join('\n\n');
+
   return (
     <>
-      <TextTruncate
-                  line={truncated ? 4 : 9999999999}
-                  element="span"
-                  truncateText="…"
-                  textElement={test}
+      <div>
+        <TextTruncate
+          containerClassName={classes.textTruncate}
+          line={truncated ? 4 : 9999999999}
+          element="p"
+          truncateText="…"
+          text={text}
+          textTruncateChild={<div><Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)' }}>
+                  {truncated ? "See More" : "See Less"}
+                  </Button></div>}
+        />
+      </div>
+      <Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)', display: `${truncated ? 'none' : 'block' }` }}>
+        {truncated ? "See More" : "See Less"}
+      </Button>
+    </>
+  )
+}
+
+export default PostDescriptions
+
+
+
+
+/* 
+
+
                   textTruncateChild={<Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)' }}>
                   {truncated ? "See More" : "See Less"}
                   </Button>}
@@ -48,8 +49,5 @@ const PostDescriptions = ({texts}) => {
                   <Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)', display: `${truncated ? 'none' : 'block' }` }}>
                   {truncated ? "See More" : "See Less"}
                   </Button>
-    </>
-  )
-}
 
-export default PostDescriptions
+*/

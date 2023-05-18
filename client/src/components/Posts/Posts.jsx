@@ -125,13 +125,8 @@ function QuiltedImageList({itemData}) {
                   <CardMedia>
                     <QuiltedImageList itemData={post.itemData}/>
                   </CardMedia>
-                  <CardContent>
+                  <CardContent style={{ padding: '20px 35px 0px' }}>
                     <PostDescriptions texts={post.description} />
-                    {/* {post.description.map((item, key) => (
-                    <Typography key={key} variant="body2" color="text.secondary" style={{ marginTop: '20px' }}>
-                      {post.description[key]}
-                    </Typography>
-                    ))} */}
                   </CardContent>
                   <CardActions disableSpacing>
                     <Checkbox
