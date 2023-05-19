@@ -1,53 +1,57 @@
-import { Button } from '@mui/material';
-import React, { useState } from 'react'
-import TextTruncate from 'react-text-truncate';
-import makeStyles from "./styles";
+import { Button, Typography } from '@mui/material';
+import React, { useEffect, useRef, useState } from 'react'
 
 const PostDescriptions = ({texts}) => {
-  const classes = makeStyles();
+  const [needsTruncation, setNeedsTruncation] = useState(false);
+  const [truncated, setTruncated] = useState(true);
 
-    const [truncated, setTruncated] = useState(true);
-    const toggleTruncate = () => {
-      setTruncated(!truncated);
+  // Adjust this value to match line height
+  const lineHeight = 1.2;
+  const textRef = useRef(null);
+  const maxLines = 3;
+  const text = texts.join('\n\n');
+  
+  useEffect(() => {
+    const handleResize = () => {
+      const textElement = textRef.current;
+      if (textElement && textElement.clientHeight > lineHeight * maxLines) {
+        setTruncated(true);
+      } else {
+        setTruncated(false);
+      }
+      setNeedsTruncation(textElement && textElement.clientHeight > 60);
+
+      console.log(textElement && textElement.clientHeight > lineHeight*3*16);
+      console.log(needsTruncation, textElement.clientHeight);
     };
+    
+    window.addEventListener("resize", handleResize);
 
-    const text = texts.join('\n\n');
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [text, maxLines, needsTruncation,]);
+
+   useEffect(() => {
+    console.log('inside the useEffect')
+    const textElement = textRef.current;
+    setNeedsTruncation(textElement && textElement.clientHeight > 60);
+  },[])
+
+  const toggleTruncate = () => {
+    setTruncated(!truncated);
+  };
 
   return (
     <>
-      <div>
-        <TextTruncate
-          containerClassName={classes.textTruncate}
-          line={truncated ? 4 : 9999999999}
-          element="p"
-          truncateText="…"
-          text={text}
-          textTruncateChild={<span><br/><Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)' }}>
-                  {truncated ? "See More" : "See Less"}
-                  </Button></span>}
-        />
+      <div style={{ maxHeight: `${truncated ? lineHeight * maxLines : 25}rem`, overflow: `${truncated ? "hidden" : "auto"}`, padding: `${truncated ? "0px 0px" : "0px 5px"}`, }}>
+        <Typography ref={textRef} dangerouslySetInnerHTML={{ __html: text }} sx={{ whiteSpace: 'pre-line', lineHeight: '1.2rem', padding: '0px', '& a': {color: '#1976d2', textDecoration: 'none'}  }}></Typography>
       </div>
-      <Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)', display: `${truncated ? 'none' : 'block' }` }}>
+      <Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)', display: `${needsTruncation ? 'block' : 'none' }` }}>
         {truncated ? "See More" : "See Less"}
       </Button>
     </>
-  )
+  );
 }
 
 export default PostDescriptions
-
-
-
-
-/* 
-
-
-                  textTruncateChild={<Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)' }}>
-                  {truncated ? "See More" : "See Less"}
-                  </Button>}
-                  />
-                  <Button onClick={toggleTruncate} sx={{ position: 'relative', left: 'calc(100% - 100px)', display: `${truncated ? 'none' : 'block' }` }}>
-                  {truncated ? "See More" : "See Less"}
-                  </Button>
-
-*/

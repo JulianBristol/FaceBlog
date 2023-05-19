@@ -6,9 +6,11 @@ export default makeStyles((theme) => ({
         background: "#E8E8E8 !important"
     },
     postHeader: {
+        background: '#f6f6f6',
         '& .MuiAvatar-root': {
             width: '75px',
             height: '75px',
+            outline: '1px solid black',
         },
         '& .MuiCardHeader-title':{
         fontSize: '1.2rem',
