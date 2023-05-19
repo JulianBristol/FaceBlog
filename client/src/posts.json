@@ -1,0 +1,107 @@
+[
+    {
+        "type": "portfolio",
+        "id": "Portfolio",
+        "title": "Creating my 3D Portfolio Page",
+        "date": "2023-05-06",
+        "itemData": [
+              {
+                  "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/Portfolio_Screenshot_00001_v5hdki.png",
+                  "title": "Portfolio Page"
+                }
+        ],
+        "description": [
+            "First and foremost, I want to give credit where it is due. This project is based on the Javascript Mastery 3D portfolio example. While I thought their portfolio was beautiful, it did not feel mine. So I made several changes to it until I felt that it was uniquely mine. You can check out my <a href='https://www.figma.com/file/e0xlMO2su9IaKPq3n8zRW5/Untitled?type=design&node-id=0%3A1&t=09kWWav39vvHeo9J-1' target='_blank'>Figma</a>(Shameless promotion of my skills in design…. Check) design for more details. You can see that this project also incorporates <a href='http://riccardozanutta.com/' target='_blank'>Riccardo’s</a> moving background SVG shapes and <a href='https://iuri.is/about' target='_blank'>Iuri’s</a> interesting usage of a dynamically changing text color based on the text’s background. These three portfolios played a major role in the design and decisions of my final portfolio page. While I’d love to state each one in detail, that would be excessively verbose.",
+            "I stated earlier that I followed JS Mastery’s tutorial. I want to elaborate a little on that. While I did follow his tutorial, I do not follow tutorials blindly. In fact, I can’t. I need to understand what I am doing and why. This is why I ignored several of his decisions. The biggest change, outside of design, is his usage of TailWindCSS. TailWind appears to be very easy to use for simple and repeatable styling and I could have used it to build my project. However, since this is a project that I am designing and building myself, to fully learn TailWind to accomplish the styling that I need would have lengthened the time to complete the project significantly. Nonetheless, I attribute TailWindCss to this project as the technologies I used because in order to understand the styling changes JS Mastery made, I would need to understand TailWind.",
+            "My biggest challenge: The biggest issue that I face during this project was the optimization of the background shapes. They are designed in such a way that they move in 4 groups. The direction they move in depends on the mouse cursor’s movement. What I was doing to track their movement was an event listener that fired each time the user moved their mouse. Very inefficient.",
+            "To optimize this, I set it to only fire once per 20 times that the mouse movement event fires. This allowed for believable real-time movement and optimized the build very well for my computer. Unfortunately, my testers still noticed a large performance hit on their devices.",
+            "To further optimize the background shapes, I had to find a way to still move all 27 shapes believably. Then I realized, that my goal was not to move the shapes. It was to move the shape groups. Since all the shapes follow one of four movements, I could attach all of them to one of four transparent panes then move each pane. I could reduce the number calculations from 27 per mouse fire to just 4."
+        ],
+        "tags": ["TBD" ],
+        "tech": "CSS, TailWindCSS, React, ThreeJS, FramerMotion",
+        "learned": "ThreeJS, TailwindCSS, more on Figma Design",
+        "LiveLink": "https://julianbristol.netlify.app/",
+        "github": "https://github.com/JulianBristol/PortfolioPage"
+    },
+    {
+        "type": "portfolio",
+        "id": "Searcy Water Utilities",
+        "title": "Consulting with Searcy Water Utilities",
+        "date": "2023-04-25",
+        "itemData": [
+            {
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/SearcyWaterUtilities_bxcxsh.png",
+            "title": "Searcy Water Utilities preview"
+          }
+        ],
+        "description": [
+            "This was my first big project without any type of safety net, and boy, did it come with its share of challenges! Getting started was tough, I quickly learned the importance of capturing every single last important detail about why a software product is being created. I didn’t have access to the stakeholders during the planning and design portion of creating the website. Actually, I have never spoken with them in person, on the phone, or by email. My contact with them was through my friend and collaborator on the project, Zach Burns, but more on him later. It felt like the stakeholders didn't care much about what I was producing, although in hindsight, that's definitely not true. Nevertheless, looking back at my original design, I can't help but feel disappointed. If I was a stakeholder, I would have expected a better design and placed more input on the sections and content that I wanted. But I can't really blame them, since they didn't really know what they wanted, and even if they did, they struggled in expressing it.",
+            "Zach acted as the intermediary between the stakeholders and me. He primarily handled the backend tasks, such as setting up the MongoDB server-side code and the admin portal. Working with him was amazing, and I'd gladly do it again. He was incredibly helpful in two ways: bouncing ideas off him and just shooting the breeze (hey, I'm human, I need to relieve stress in a healthy way).",
+            "Once we finalized some components, we dove into coding. I focused mainly on the frontend, working on the design, responsiveness, and functionality of the website. But after a while, I had to step back and ask myself why I wasn't satisfied with the site. I still struggle to put my feelings into words, but during that time, there were drastic changes. That's when I realized that I was using my original design as a loose guideline and testing the look and feel of page components in code as I went along.",
+            "That was a massive mistake that I'll never make again. It ended up being the most time-consuming part of the project because CSS can be a beast to tame when you're trying to bring vague ideas to life. The process was simple but time-consuming: Think of a change, code the change, wonder why it didn't work, research the bug or issue, fix it, realize that my change wasn't quite right or was overengineered, and repeat. I must have gone through this cycle 5-6 times for some components before giving up. In the end, I remembered my training from school and started spending more time researching how components look and function on different websites before diving into Figma to edit designs. I estimate that this approach saved the project at least 6 months of work and likely saved me a hefty therapist bill.",
+            "Once I had a solid, reusable design in place, productivity shot through the roof. Where it would take me a week or more to create a single component on the page, I could code 2-3 pages in a day. Towards the end of the project, the biggest time sink was less the coding and more waiting for the stakeholders to get us the information that we needed to build additional pages.",
+            "An important decision that we made was creating a list of stretch goals to manage scope creep. Whenever we came up with a change or additional feature that seemed interesting, we'd discuss its feasibility, time frame, and necessity. If it didn't pass muster in any of those areas, we tossed it into the stretch goal pool, leaving it up to the stakeholders to make a decision on it.",
+            "As of April 25th 2023, this is my most educational project. It deepened my knowledge of CSS and JavaScript, reiterated the importance of the design and planning stages of the SDLC, gave me several hands-on examples of how important it is to have access to stakeholders, and displays my skills to myself and future employers. Despite encountering setbacks along the way, I've turned those challenges into valuable lessons and transformed hard work into success. While there may be more tweaks I could make to the page, I'm incredibly proud of the growth I've seen in my coding and design skills. It's been a journey of turning pressure into diamonds and I'm thrilled with the progress I've made!"
+        ],
+        "tags": ["TBD" ],
+        "tech": "CSS, MUI, MongoDB, Express, React, Node",
+        "learned": "To put more focus on the design stage, much more about CSS and MUI",
+        "LiveLink": "https://searcywater.org",
+        "github": ""
+    },
+    {
+        "type": "portfolio",
+        "id": "Travel Wisely",
+        "title": "Travel Wisely",
+        "date": "2022-10-20",
+        "itemData": [
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356125/FaceBlog%20App/TravelWisely_hhffwn.png",
+              "title": "Travel Wisely website"
+            },
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684434479/FaceBlog%20App/Rain_eofdg7.png",
+              "title": "rain icon"
+            },
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684434404/FaceBlog%20App/Partly_Cloudy_wtpfyh.png",
+              "title": "partly cloudy icon"
+            }
+        ],
+        "description": [
+            "Travel Wisely was an incredibly enjoyable project to work on. I leveraged the power of Google Maps, Google Autocomplete, WeatherAPI, and Travel Advisor APIs to gather a wealth of information such as restaurants, locations, weather forecasts, and mapping features, all aimed at helping users make informed travel decisions.",
+            "Exploring the capabilities of these APIs and finding ways to present the data in a user-friendly manner was a rewarding experience. In fact, I had so much fun that I took it a step further and created my own custom weather images and icons specifically for this project.",
+            "However, I did encounter a challenge along the way. I overlooked the importance of monitoring my API call limit, and as a result, I exceeded the limit during development. This limitation hindered my ability to view the generated information without incurring substantial costs to ensure the proper functioning of my app.",
+            "Nonetheless, the overall journey of developing Travel Wisely was filled with excitement, creativity, and valuable lessons learned."
+        ],
+        "tags": ["TBD" ],
+        "tech": "MUI, React, JavaScript, Node",
+        "learned": "Api calls, MUI, GoogleMaps React",
+        "LiveLink": "travelwisely.netlify.app",
+        "github": "https://github.com/JulianBristol/TravelWisely"
+    },
+    {
+        "type": "portfolio",
+        "id": "Blog",
+        "title": "My First MUI Project",
+        "date": "2022-08-08",
+        "itemData": [
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356244/FaceBlog%20App/JuDev2.png",
+              "title": "FaceBlog React Project"
+            },
+            {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684427835/FaceBlog%20App/Screenshot_2023-05-18_123640_jfdjpe.png",
+              "title": "FaceBlog website"
+            }
+        ],
+        "description": [
+            "This was my first time working with Mui and only my second time completing a React project. As you could imaging, it was fairly challenging to complete. I had a lot of trouble fixing the several errors that I made in the code but as time went on, things became much easier. I found myself falling in love with both React and Mui. I want to learn more about it and create more projects. As my portfolio grows, I know that I will become a much better programmer, not only in with React, but with all programming languages."
+        ],
+        "tags": ["Blog","Mui, React", "FaceBlog", "AI", "Programming" ],
+        "tech": "Mui, React",
+        "learned": "MUI",
+        "LiveLink": "https://face-blog.netlify.app/",
+        "github": "https://github.com/JulianBristol/FaceBlog"
+    }
+]
