@@ -23,7 +23,7 @@ import {
   import posts from "../../posts.json";
   import { useState } from "react";
   import makeStyles from "./styles";
-import PostDescriptions from "./PostDescriptions";
+  import PostDescriptions from "./PostDescriptions";
   
   const Posts = () => {
     const classes = makeStyles();
@@ -54,45 +54,73 @@ import PostDescriptions from "./PostDescriptions";
       ? "Add to favorites"
       : "Remove from favorites";
 
-const imgArrPositioning = [ 
-    [{row: 4, col: 4}],
-    [{row: 2, col: 2}, {row: 2, col: 2}],
-    [{row: 2, col: 2}, {row: 2, col: 1}, {row: 2, col: 1}],
-    [{row: 2, col: 2}, {row: 1, col: 1}, {row: 1, col: 1}, {row: 1, col: 2}],
-];
+    const imgArrPositioning = [ 
+      [{row: 4, col: 4}],
+      [{row: 2, col: 2}, {row: 2, col: 2}],
+      [{row: 2, col: 2}, {row: 2, col: 1}, {row: 2, col: 1}],
+      [{row: 2, col: 2}, {row: 1, col: 1}, {row: 1, col: 1}, {row: 1, col: 2}],
+    ];
 
+    function srcset(image, size, rows = 1, cols = 1) {
+      return {
+        src: `${image}`/* ?w=${size * cols}%&h=${size * rows}%&fit=crop&auto=format */,
+        /* srcSet: `${image}?w=${size * cols}%&h=${
+          size * rows
+        }%&fit=crop&auto=format&dpr=2 2x`, */
+      };
+    }
+    function QuiltedImageList({itemData}) {
+      const variant = itemData.length -1;
+      return (
+        <ImageList
+          sx={{ width: '100%', height: '20%', maxHeight: '540px', overflow: 'hidden' }}
+          variant="quilted"
+          cols={4}
+        >
+          {itemData.map((item, key) => {
+            return (
+              <ImageListItem key={key} cols={imgArrPositioning[variant][key].col || 1} rows={imgArrPositioning[variant][key].row || 1}>
+                <img
+                  {...srcset(item.img, 121, imgArrPositioning[variant][key].row, imgArrPositioning[variant][key].col)}
+                 alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            )
+          })}
+        </ImageList>
+      );
+    }
 
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}`/* ?w=${size * cols}%&h=${size * rows}%&fit=crop&auto=format */,
-    /* srcSet: `${image}?w=${size * cols}%&h=${
-      size * rows
-    }%&fit=crop&auto=format&dpr=2 2x`, */
-  };
-}
+    function getOrdinalSuffix(day) {
+      if (day >= 11 && day <= 13) {
+        return 'th';
+      }
+    
+      switch (day % 10) {
+        case 1:
+          return 'st';
+        case 2:
+          return 'nd';
+        case 3:
+          return 'rd';
+        default:
+          return 'th';
+      }
+    }
+    
+    const parseDate = ((dateStr) => {
+      const date = new Date(`${dateStr}T00:00:00`);
+      const options = { month: 'long', day: 'numeric', year: 'numeric' };
 
-function QuiltedImageList({itemData}) {
-    const variant = itemData.length -1;
-  return (
-    <ImageList
-      sx={{ width: '100%', height: '20%', maxHeight: '540px', overflow: 'hidden' }}
-      variant="quilted"
-      cols={4}
-    >
-      {itemData.map((item, key) => {
-        return (
-        <ImageListItem key={key} cols={imgArrPositioning[variant][key].col || 1} rows={imgArrPositioning[variant][key].row || 1}>
-          <img
-            {...srcset(item.img, 121, imgArrPositioning[variant][key].row, imgArrPositioning[variant][key].col)}
-            alt={item.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-      )
-      })}
-    </ImageList>
-  );
-}
+      const formattedDate = date.toLocaleDateString('en-US', options);
+      const ordinalSuffix = getOrdinalSuffix(date.getDate());
+
+      const result = formattedDate.replace(/(\d+)/, `$1${ordinalSuffix}`);
+
+      return result;
+
+    })
 
     return(
         <>
@@ -143,12 +171,12 @@ function QuiltedImageList({itemData}) {
                     }
                       </span>}
                     </div>}
-                    subheader={post.date}
+                    subheader={parseDate(post.date)}
                   />
                   <CardMedia>
                     <QuiltedImageList itemData={post.itemData}/>
                   </CardMedia>
-                  <CardContent style={{ padding: '20px 35px 0px' }}>
+                  <CardContent style={{ padding: '20px 20px 0px' }}>
                     <PostDescriptions texts={post.description} />
                     <br/>
                     {post.tech === '' ? '' : <Typography variant="body2">Tech Used: {post.tech}</Typography>}

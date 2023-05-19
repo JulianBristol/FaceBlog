@@ -20,9 +20,6 @@ const PostDescriptions = ({texts}) => {
         setTruncated(false);
       }
       setNeedsTruncation(textElement && textElement.clientHeight > 60);
-
-      console.log(textElement && textElement.clientHeight > lineHeight*3*16);
-      console.log(needsTruncation, textElement.clientHeight);
     };
     
     window.addEventListener("resize", handleResize);
@@ -33,7 +30,6 @@ const PostDescriptions = ({texts}) => {
   }, [text, maxLines, needsTruncation,]);
 
    useEffect(() => {
-    console.log('inside the useEffect')
     const textElement = textRef.current;
     setNeedsTruncation(textElement && textElement.clientHeight > 60);
   },[])

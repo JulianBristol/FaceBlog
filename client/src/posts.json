@@ -3,7 +3,7 @@
         "type": "portfolio",
         "id": "Portfolio",
         "title": "Creating my 3D Portfolio Page",
-        "date": "May 6, 2023",
+        "date": "2023-05-06",
         "itemData": [
               {
                   "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/Portfolio_Screenshot_00001_v5hdki.png",
@@ -27,7 +27,7 @@
         "type": "portfolio",
         "id": "Searcy Water Utilities",
         "title": "Consulting with Searcy Water Utilities",
-        "date": "April 25th 2023",
+        "date": "2023-04-25",
         "itemData": [
             {
             "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/SearcyWaterUtilities_bxcxsh.png",
@@ -53,7 +53,7 @@
         "type": "portfolio",
         "id": "Travel Wisely",
         "title": "Travel Wisely",
-        "date": "October 20th, 2022",
+        "date": "2022-10-20",
         "itemData": [
             {
               "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356125/FaceBlog%20App/TravelWisely_hhffwn.png",
@@ -84,7 +84,7 @@
         "type": "portfolio",
         "id": "Blog",
         "title": "My First MUI Project",
-        "date": "August 8th, 2022",
+        "date": "2022-08-08",
         "itemData": [
             {
               "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356244/FaceBlog%20App/JuDev2.png",

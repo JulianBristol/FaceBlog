@@ -43,7 +43,7 @@ const Rightbar = () => {
           <Avatar alt="FOR ALL THAT IS HOLY, HIRE ME" src="" />
         </AvatarGroup>
         <Typography variant="h6" fontWeight={100}>
-          Latest Builds
+          Latest Posts
         </Typography>
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
           {itemData.map((item) => (

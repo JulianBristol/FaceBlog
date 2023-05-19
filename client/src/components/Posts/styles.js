@@ -3,10 +3,9 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles((theme) => ({
     card:{
         marginBottom: '40px',
-        background: "#E8E8E8 !important"
+        background: '#f6f6f6 !important',
     },
     postHeader: {
-        background: '#f6f6f6',
         '& .MuiAvatar-root': {
             width: '75px',
             height: '75px',
