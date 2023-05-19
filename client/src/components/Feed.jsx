@@ -5,9 +5,9 @@ import Posts from "./Posts/Posts";
 const Feed = () => {
   
   return (
-    <Box flex={4} p={2}>
+    <>
       <Posts />
-    </Box>
+    </>
   );
 };
 

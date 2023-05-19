@@ -25,7 +25,10 @@ import {
   import makeStyles from "./styles";
   import PostDescriptions from "./PostDescriptions";
   
-  const Posts = () => {
+  const Posts = ({singlePost, post}) => {
+    if (singlePost){
+      posts = post
+    }
     const classes = makeStyles();
     //Check if icon is checked
     const [checked, setChecked] = useState(false);

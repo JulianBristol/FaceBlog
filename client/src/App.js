@@ -18,22 +18,24 @@ import Account from "./components/Profile/Account";
 function App() {
   return (
     <Box>
-      <Navbar />
-      <Stack direction="row" spacing={2} justifyContent="space-evenly">
-        <Sidebar />
-        <Router>
-          <Routes>
-            <Route path="/" exact element={<Feed />} />
-            <Route path="/Projects" exact element={<Projects />} />        
-            <Route path="/Projects/:id" element={<Project />} />
-            <Route path="/Pages" exact element={<Pages />} />
-            <Route path="/Friends" exact element={<Friends />} />
-            <Route path="/Settings" exact element={<Settings />} />
-            <Route path="/Account" exact element={<Account />} />
-          </Routes>
-        </Router>
-        <Rightbar />
-      </Stack>
+      <Router>
+        <Navbar />
+        <Stack direction="row" spacing={2} justifyContent="space-evenly">
+          <Sidebar />
+          <Box flex={4} p={2}>
+            <Routes>
+              <Route path="/" exact element={<Feed />} />
+              <Route path="/Projects" exact element={<Projects />} />        
+              <Route path="/Projects/:id" element={<Project />} />
+              <Route path="/Pages" exact element={<Pages />} />
+              <Route path="/Friends" exact element={<Friends />} />
+              <Route path="/Settings" exact element={<Settings />} />
+              <Route path="/Account" exact element={<Account />} />
+            </Routes>
+          </Box>
+          <Rightbar />
+        </Stack>
+      </Router>
     </Box>
   );
 }
