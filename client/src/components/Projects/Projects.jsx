@@ -1,10 +1,14 @@
 import React from 'react'
+import posts from '../../posts.json'
+import Posts from '../Posts/Posts';
 
 const Projects = () => {
+  const projects = posts.filter(obj => obj.type === 'portfolio');
+  console.log(projects)
   return (
-    <div>
-      You've made it to the Projects page
-    </div>
+    <>
+      <Posts overridePosts={true} post={projects}/>
+    </>
   )
 }
 

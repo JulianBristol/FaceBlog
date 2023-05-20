@@ -25,8 +25,8 @@ import {
   import makeStyles from "./styles";
   import PostDescriptions from "./PostDescriptions";
   
-  const Posts = ({singlePost, post}) => {
-    if (singlePost){
+  const Posts = ({overridePosts, post}) => {
+    if (overridePosts){
       posts = post
     }
     const classes = makeStyles();
