@@ -1,6 +1,7 @@
 import { Box, styled, TextField, Autocomplete } from "@mui/material";
 import React, { useState } from "react";
 import posts from "../posts.json"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -13,16 +14,19 @@ const SearchBox = styled(Autocomplete)(({ theme }) => ({
 
 
 const SearchOptions = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState('');
   //Get list of projects from data source
   const projects = posts.map((post) => ({ id: post.id, tags: post.tags }));
   // Sort the projects array alphabetically by id
   projects.sort((a, b) => a.id.localeCompare(b.id));
 
+  const navigate = useNavigate();
+
   const handleChange = (event, value) => {
     setSelectedOption(value);
-  }
+    navigate(`/Projects/${value}`);
 
+  }
 
   return (
     <Box>

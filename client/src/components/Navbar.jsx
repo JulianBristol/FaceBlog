@@ -17,6 +17,7 @@ import React from "react";
 import { useState } from "react";
 import SearchOptions from "./SearchOptions";
 import ProfilePicture from "../images/avatar/Profile Picture.jpg";
+import { Link } from "react-router-dom";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -46,9 +47,11 @@ const Navbar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
+        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
         FaceBlog
         </Typography>
+        </Link>
         <Tooltip title="FaceBlog">
           <DeveloperModeIcon sx={{ display: { xs: "block", sm: "none" } }} />
         </Tooltip>

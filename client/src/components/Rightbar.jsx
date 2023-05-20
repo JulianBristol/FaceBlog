@@ -15,12 +15,12 @@ import IMAGES from "../images/avatar";
 
 const Rightbar = () => {
   return (
-    <Box flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position="fixed">
+    <Box flex={2} p={2} sx={{ minWidth: '250px', display: { xs: "none", md: "block" } }}>
+      <Box position="fixed" sx={{ width: 'calc((100% / 2) * 0.5)' }}>
         <Typography variant="h6" fontWeight={100}>
           Online Friends
         </Typography>
-        <AvatarGroup max={7} >
+        <AvatarGroup max={6} >
           <Avatar alt="kevinLenore" src={IMAGES.kevinLenore} />
           <Avatar alt="Tim Lee" src="" />
           <Avatar alt="Thorburn Frederica" src={IMAGES.thorburnFrederica} />
@@ -45,11 +45,12 @@ const Rightbar = () => {
         <Typography variant="h6" fontWeight={100}>
           Latest Posts
         </Typography>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+        <Box sx={{ height: 450, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '5px', overflowY: 'auto' }}>
           {itemData.map((item) => (
             <Box key={item.img}>
               <ImageListItem>
                 <img
+                style={{ objectFit: 'cover', height: '110px', width: '150px', }}
                   src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
                   srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
@@ -80,7 +81,7 @@ const Rightbar = () => {
               </ImageListItem>
             </Box>
           ))}
-        </ImageList>
+        </Box>
       </Box>
     </Box>
   );
