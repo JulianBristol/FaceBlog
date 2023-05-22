@@ -1,26 +1,28 @@
+import { useRecoilValue } from 'recoil';
+import { darkModeState } from '../darkModeState';
 import {
   Avatar,
   AvatarGroup,
   Box,
-/*   IconButton,
-  ImageListItemBar, */
   Typography,
 } from "@mui/material";
-/* import { red } from "@mui/material/colors"; */
-import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import React from "react";
 import IMAGES from "../images/avatar";
-/* import WebIcon from "@mui/icons-material/Web"; */
+import makeStyles from "./styles";
+
 
 const Rightbar = () => {
+  const darkMode = useRecoilValue(darkModeState);
+  const classes = makeStyles();
+  
   return (
     <Box flex={2} p={2} sx={{ minWidth: '250px', display: { xs: "none", md: "block" } }}>
       <Box position="fixed" sx={{ width: 'calc((100% / 2) * 0.5)' }}>
-        <Typography variant="h6" fontWeight={100}>
+        <Typography variant="h6" fontWeight={100} className={`${darkMode ? classes.darkMode_Header6: ''}`}>
           Online Friends
         </Typography>
-        <AvatarGroup max={6} >
+        <AvatarGroup max={6} className={`${darkMode ? classes.darkMode_AvatarGroup: ''}`}>
           <Avatar alt="kevinLenore" src={IMAGES.kevinLenore} />
           <Avatar alt="Tim Lee" src="" />
           <Avatar alt="Thorburn Frederica" src={IMAGES.thorburnFrederica} />
@@ -42,7 +44,7 @@ const Rightbar = () => {
           <Avatar alt="The PURGE" src="" />
           <Avatar alt="FOR ALL THAT IS HOLY, HIRE ME" src="" />
         </AvatarGroup>
-        <Typography variant="h6" fontWeight={100}>
+        <Typography variant="h6" fontWeight={100} className={`${darkMode ? classes.darkMode_Header6: ''}`}>
           Latest Posts
         </Typography>
         <Box sx={{ height: 450, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '5px', overflowY: 'auto' }}>

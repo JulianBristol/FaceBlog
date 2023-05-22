@@ -14,9 +14,10 @@ const SearchBox = styled(Autocomplete)(({ theme }) => ({
 
 
 const SearchOptions = () => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState(null);
   //Get list of projects from data source
-  const projects = posts.map((post) => ({ id: post.id, tags: post.tags }));
+  const projects = posts
+  .filter((post) => post.type === "portfolio").map((post) => ({ id: post.id, tags: post.tags }));
   // Sort the projects array alphabetically by id
   projects.sort((a, b) => a.id.localeCompare(b.id));
 
