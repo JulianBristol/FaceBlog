@@ -1,3 +1,4 @@
+import { useRecoilState } from 'recoil';
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Rightbar from "./components/Rightbar";
@@ -14,14 +15,21 @@ import Pages from "./components/Pages/Pages";
 import Friends from "./components/Friends/Friends";
 import Settings from "./components/Settings/Settings";
 import Account from "./components/Profile/Account";
+import { darkModeState } from './darkModeState';
+import './App.css'
 
 function App() {
+  const [darkMode, setDarkMode] = useRecoilState(darkModeState);
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
+  
   return (
-    <Box>
+    <Box className={`root ${darkMode ? 'darkMode-bg' : 'lightMode-bg'}`}>
       <Router>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-evenly">
-          <Sidebar />
+          <Sidebar toggleDarkMode={darkMode} setToggleDarkMode={setDarkMode} handleDarkMode={handleDarkMode}/>
           <Box flex={4} p={2}>
             <Routes>
               <Route path="/" exact element={<Feed />} />
