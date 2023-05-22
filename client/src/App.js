@@ -17,13 +17,49 @@ import Settings from "./components/Settings/Settings";
 import Account from "./components/Profile/Account";
 import { darkModeState } from './darkModeState';
 import './App.css'
+import { useEffect, useState } from 'react';
 
 function App() {
   const [darkMode, setDarkMode] = useRecoilState(darkModeState);
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
   }
+
+  const cookieName = "darkMode";
+  const expirationDays = 30;
+
+  const setCookie = (name, value, days) => {
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + days);
+    document.cookie = `${name}=${value}; expires=${expirationDate.toUTCString()}; path=/`;
+  };
   
+  const getCookieValue = (name) => {
+    const cookieValue = document.cookie
+      .split("; ")
+      .find((cookie) => cookie.startsWith(`${name}=`));
+  
+    if (cookieValue) {
+      const [, value] = cookieValue.split("=");
+      return value === "true";
+    }
+  
+    return null;
+  };
+
+  // Set the initial darkMode state from the cookie
+  useEffect(() => {
+    const cookieValue = getCookieValue(cookieName);
+    if (cookieValue !== null) {
+      setDarkMode(cookieValue);
+    }
+  }, []);
+
+  // Update the cookie when the darkMode state changes
+  useEffect(() => {
+    setCookie(cookieName, darkMode, expirationDays);
+  }, [darkMode]);
+
   return (
     <Box className={`root ${darkMode ? 'darkMode-bg' : 'lightMode-bg'}`}>
       <Router>
