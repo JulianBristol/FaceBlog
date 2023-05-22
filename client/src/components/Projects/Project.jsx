@@ -7,16 +7,17 @@ const Project = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = posts.find(post => post.id === id);
+
+  useEffect(() => {
+    if (project === undefined) {
+      navigate('/Projects');
+    }
+  }, [project, navigate]);
   
   return (
     <>
       {project === undefined ? 
-      (
-        <>
-        <h2>Error: Page not found</h2>
-        <p>Click <a href='/Projects'>here</a> to go back to all projects</p>
-        </>
-      )
+      ''
       : 
       <Posts overridePosts={true} post={[project]}/>}
     </>

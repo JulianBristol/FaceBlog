@@ -50,11 +50,11 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" sx={{ backgroundColor: `${darkMode ? '#182c3f' : '#4d7fb1'}` }}>
       <StyledToolbar>
-        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
+        <a href='/' style={{ textDecoration: 'none', color: 'white' }}>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
         FaceBlog
         </Typography>
-        </Link>
+        </a>
         <Tooltip title="FaceBlog">
           <DeveloperModeIcon sx={{ display: { xs: "block", sm: "none" } }} />
         </Tooltip>

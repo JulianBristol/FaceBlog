@@ -31,74 +31,49 @@ const Sidebar = ({handleDarkMode}) => {
   const darkMode = useRecoilValue(darkModeState);
 
   return (
-    <Box flex={1} p={2} sx={{ minWidth: '150px', display: { xs: "none", sm: "block" } }}>
+    <Box flex={1} p={2} sx={{ minWidth: '160px', display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
         <List>
           <ListItem disablePadding>
-            <Link className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} to='/'>
-            <ListItemButton>
+            <ListItemButton className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} component="a" href="/">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Homepage" />
+              <ListItemText primary="HomePage" />
             </ListItemButton>
-            </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} to='/Pages'>
-            <ListItemButton>
+            
+            <ListItemButton className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} component="a" href="/Pages">
               <ListItemIcon>
                 <ArticleIcon />
               </ListItemIcon>
               <ListItemText primary="Pages" />
             </ListItemButton>
-            </Link>
-          </ListItem>
-          {/* <ListItem disablePadding>
-            <ListItemButton component="a" href="#Placeholder-text">
-              <ListItemIcon>
-                <GroupsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Groups" />
-            </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#Placeholder-text">
-              <ListItemIcon>
-                <StorefrontIcon />
-              </ListItemIcon>
-              <ListItemText primary="Marketplace" />
-            </ListItemButton>
-          </ListItem> */}
-          <ListItem disablePadding>
-            <Link className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} to='/Friends'>
-            <ListItemButton>
+            <ListItemButton className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} component="a" href="/Friends">
               <ListItemIcon>
                 <PeopleIcon />
               </ListItemIcon>
               <ListItemText primary="Friends" />
             </ListItemButton>
-          </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} to='/Settings'>
-            <ListItemButton>
+            <ListItemButton className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} component="a" href="/Settings">
               <ListItemIcon>
                 <SettingsIcon />
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
-          </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} to='/Account'>
-            <ListItemButton>
+            <ListItemButton className={`${classes.ListItemButtonContainer} ${darkMode ? classes.darkMode_Link : classes.lightMode_Link}`} component="a" href="/Account">
               <ListItemIcon>
                 <AccountBoxIcon />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
-          </Link>
           </ListItem>
           <ListItem title="Toggle Darkmode" disablePadding>
             <ListItemButton onClick={handleDarkMode}>
@@ -112,10 +87,10 @@ const Sidebar = ({handleDarkMode}) => {
             </ListItemButton>
           </ListItem>
           <Box sx={{ justifyContent: 'start', display: { xs: "block", md: "none" } }}>
-          <Typography variant="h6" fontWeight={100}>
+          <Typography variant="h6" fontWeight={100} className={`${darkMode ? classes.darkMode_Header6: ''}`}>
           Online Friends
         </Typography>
-        <AvatarGroup max={5} >
+        <AvatarGroup max={5} className={`${darkMode ? classes.darkMode_AvatarGroup: ''}`} sx={{ justifyContent: 'start' }}>
           <Avatar alt="kevinLenore" src={IMAGES.kevinLenore} />
           <Avatar alt="Tim Lee" src="" />
           <Avatar alt="Thorburn Frederica" src={IMAGES.thorburnFrederica} />

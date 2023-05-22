@@ -1,6 +1,5 @@
 import { useRecoilState } from 'recoil';
 import Sidebar from "./components/Sidebar";
-import Feed from "./components/Feed";
 import Rightbar from "./components/Rightbar";
 import { Box, Stack } from "@mui/material";
 import Navbar from "./components/Navbar";
@@ -18,6 +17,7 @@ import Account from "./components/Profile/Account";
 import { darkModeState } from './darkModeState';
 import './App.css'
 import { useEffect, useState } from 'react';
+import Posts from './components/Posts/Posts';
 
 function App() {
   const [darkMode, setDarkMode] = useRecoilState(darkModeState);
@@ -68,7 +68,7 @@ function App() {
           <Sidebar toggleDarkMode={darkMode} setToggleDarkMode={setDarkMode} handleDarkMode={handleDarkMode}/>
           <Box flex={4} p={2}>
             <Routes>
-              <Route path="/" exact element={<Feed />} />
+              <Route path="/" exact element={<Posts />} />
               <Route path="/Projects" exact element={<Projects />} />        
               <Route path="/Projects/:id" element={<Project />} />
               <Route path="/Pages" exact element={<Pages />} />
