@@ -33,10 +33,15 @@ export default makeStyles((theme) => ({
     },
     lightMode_SwitchD:{
         color: '#6e6e6e',
-    }
+    },
+    darkMode_Header6:{
+        color: '#DFDFDF',
+    },
+    darkMode_AvatarGroup:{
+        '& .MuiAvatar-root': {
+            border: '2px solid #262626 !important',
+        }
+    },
 
-
-/* 
-        className={`${darkMode ? classes.darkMode_SwitchL : classes.lightMode_SwitchL}`}  */
 }
 ));

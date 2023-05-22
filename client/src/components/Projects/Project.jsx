@@ -6,7 +6,7 @@ import Posts from '../Posts/Posts';
 const Project = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const project = posts.find(obj => obj.id === id);
+  const project = posts.find(post => post.id === id);
   
   return (
     <>

@@ -29,7 +29,6 @@ import makeStyles from "./styles";
 const Sidebar = ({handleDarkMode}) => {
   const classes = makeStyles();
   const darkMode = useRecoilValue(darkModeState);
-  console.log(darkMode)
 
   return (
     <Box flex={1} p={2} sx={{ minWidth: '150px', display: { xs: "none", sm: "block" } }}>

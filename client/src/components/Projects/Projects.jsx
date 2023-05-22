@@ -4,7 +4,6 @@ import Posts from '../Posts/Posts';
 
 const Projects = () => {
   const projects = posts.filter(obj => obj.type === 'portfolio');
-  console.log(projects)
   return (
     <>
       <Posts overridePosts={true} post={projects}/>

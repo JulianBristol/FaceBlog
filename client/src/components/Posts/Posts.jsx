@@ -156,7 +156,7 @@ import {
                     title={
                     <div>
                       {post.title}
-                      {post.LiveLink === '' && post.github === '' ? '' : 
+                      {(!post.LiveLink && !post.github) ? '' : 
                       <span>
                         <br/>
                     {post.LiveLink === '' ? '' : 
@@ -179,14 +179,14 @@ import {
                     </div>}
                     subheader={parseDate(post.date)}
                   />
-                  <CardMedia>
+                  {post.itemData ? <CardMedia>
                     <QuiltedImageList itemData={post.itemData}/>
-                  </CardMedia>
+                  </CardMedia> : ''}
                   <CardContent style={{ padding: '20px 20px 0px' }}>
                     <PostDescriptions texts={post.description} />
                     <br/>
-                    {post.tech === '' ? '' : <Typography variant="body2">Tech Used: {post.tech}</Typography>}
-                    {post.learned === '' ? '' : <Typography variant="body2">What I learned: {post.learned}</Typography>}
+                    {post.tech ? <Typography variant="body2">Tech Used: {post.tech}</Typography> : ''}
+                    {post.learned ? <Typography variant="body2">What I learned: {post.learned}</Typography> : ''}
                   </CardContent>
                   <CardActions disableSpacing>
                     <Checkbox
