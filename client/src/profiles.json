@@ -1,0 +1,14 @@
+{
+    "portfolio": {
+        "named": "Julian Bristol",
+        "initials": "JB",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783391/FaceBlog%20App/PXL_20221002_135603827_2_nqm1ok.jpg",
+        "alt": "Julian Bristol's profile picture"
+    },
+    "blog": {
+        "named": "Ju Ju Bristol",
+        "initials": "JB",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783381/FaceBlog%20App/Professional_Profile_Picture_wl83ka.jpg",
+        "alt": "Julian Bristol's profile picture"
+    }
+}

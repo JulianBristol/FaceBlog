@@ -1,11 +1,12 @@
 [
   {
-    "type": "twitter",
-    "id": "twitter",
-    "title": "Twitter Test",
-    "date": "2023-05-06",
+    "type": "blog",
+    "id": "FaceBlog Scope Creep",
+    "title": "This is taking quite some time...",
+    "date": "2023-05-22",
     "description": [
-        "Testing the Twitter Feed"
+        "I am currently working on the FaceBlog page but this is taking a long time to get anywhere. I added some the dark mode today and fixed some bugs but I am beginning to wonder if my time is better spent doing job applications or other projects. I mean, I still need to create AI profiles, the Pages page and their sublinks, the friends page and their profiles, some mock settings, and other addons.",
+        "I was also thinking about adding a backend for this so that ChatGPT can automatically post to the backend. But at that point, this webpage will become a few days worth of code to be a fully functional social media platform. I don't have the time and money to create a full facebook clone"
     ],
     "tags": ["TBD" ]
   },

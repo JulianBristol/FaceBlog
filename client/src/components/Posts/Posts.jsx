@@ -23,6 +23,7 @@ import {
   import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
   import ProfilePicture from "../../images/avatar/Profile Picture.jpg";
   import posts from "../../posts.json";
+  import profiles from "../../profiles.json";
   import { useState } from "react";
   import makeStyles from "./styles";
   import PostDescriptions from "./PostDescriptions";
@@ -40,7 +41,7 @@ import {
         console.log(liveLink, github);
     })
 
-    const profiles = {
+    /* const profiles = {
         "portfolio": {
             "name": "Julian Bristol",
             "initials": "JB",
@@ -48,13 +49,13 @@ import {
             "alt": "Julian Bristol's profile picture"
         },
         
-        "twitter": {
+        "blog": {
             "name": "test",
             "initials": "Test",
             "img": ProfilePicture,
             "alt": "test's profile picture"
         },
-    }
+    } */
     
     const addRemoveFavorites = checked
       ? "Add to favorites"
