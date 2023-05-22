@@ -1,19 +1,18 @@
+import { useRecoilValue } from 'recoil';
+import { darkModeState } from '../darkModeState';
 import {
   Avatar,
   AvatarGroup,
   Box,
-/*   IconButton,
-  ImageListItemBar, */
   Typography,
 } from "@mui/material";
-/* import { red } from "@mui/material/colors"; */
-import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import React from "react";
 import IMAGES from "../images/avatar";
-/* import WebIcon from "@mui/icons-material/Web"; */
 
 const Rightbar = () => {
+  const darkMode = useRecoilValue(darkModeState);
+  
   return (
     <Box flex={2} p={2} sx={{ minWidth: '250px', display: { xs: "none", md: "block" } }}>
       <Box position="fixed" sx={{ width: 'calc((100% / 2) * 0.5)' }}>

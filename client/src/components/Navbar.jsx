@@ -1,3 +1,4 @@
+import { useRecoilValue } from 'recoil';
 import {
   AppBar,
   Avatar,
@@ -18,6 +19,7 @@ import { useState } from "react";
 import SearchOptions from "./SearchOptions";
 import ProfilePicture from "../images/avatar/Profile Picture.jpg";
 import { Link } from "react-router-dom";
+import { darkModeState } from '../darkModeState';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -44,8 +46,9 @@ const UserBox = styled(Box)(({ theme }) => ({
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const darkMode = useRecoilValue(darkModeState);
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: `${darkMode ? '#182c3f' : '#4d7fb1'}` }}>
       <StyledToolbar>
         <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>

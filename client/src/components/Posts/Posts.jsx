@@ -1,3 +1,5 @@
+import { useRecoilValue } from 'recoil';
+import { darkModeState } from '../../darkModeState';
 import {
     Avatar,
     Card,
@@ -26,6 +28,7 @@ import {
   import PostDescriptions from "./PostDescriptions";
   
   const Posts = ({overridePosts, post}) => {
+  const darkMode = useRecoilValue(darkModeState);
     if (overridePosts){
       posts = post
     }
@@ -129,9 +132,9 @@ import {
         <>
         {posts.map((post, key) => {
             return (
-                <Card className={classes.card} key={key}>
+                <Card className={`${classes.card} ${darkMode ? classes.darkMode_Card : classes.lightMode_Card}`} key={key}>
                   <CardHeader
-                  className={classes.postHeader}
+                  className={`${classes.postHeader} ${darkMode ? classes.darkMode_PostHeader : ''}`} 
                     avatar={
                         <Tooltip title={profiles[post.type].name}>
                       <Avatar
@@ -144,7 +147,7 @@ import {
                       </Tooltip>
                     }
                     action={
-                      <IconButton className={classes.icons} title="More Options" aria-label="settings" onClick={() => {
+                      <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="More Options" aria-label="settings" onClick={() => {
                         handleAction(post.LiveLink, post.github);
                       }}>
                         <MoreVertIcon />
@@ -157,7 +160,7 @@ import {
                       <span>
                         <br/>
                     {post.LiveLink === '' ? '' : 
-                      <IconButton className={classes.icons} title="View Website" aria-label="see Website" onClick={() => {
+                      <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="View Website" aria-label="see Website" onClick={() => {
                           window.open(post.LiveLink, '_blank');
                         }}
                         >
@@ -165,7 +168,7 @@ import {
                       </IconButton>
                     }
                     {post.github === '' ? '' : 
-                      <IconButton className={classes.icons} title="View Github link" aria-label="see Github" 
+                      <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="View Github link" aria-label="see Github" 
                       onClick={() => {
                         window.open(post.github, '_blank');
                       }}>
@@ -191,10 +194,10 @@ import {
                         e.target.checked ? setChecked(false) : setChecked(true);
                       }}
                       title={addRemoveFavorites}
-                      icon={<FavoriteBorderIcon />}
+                      icon={<FavoriteBorderIcon className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} />}
                       checkedIcon={<FavoriteIcon sx={{ color: "#ff2222" }} />}
                     />
-                    <IconButton title="Share" aria-label="share">
+                    <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="Share" aria-label="share">
                       <ShareIcon />
                     </IconButton>
                   </CardActions>
