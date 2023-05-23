@@ -39,7 +39,7 @@ const Sidebar = ({handleDarkMode}) => {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="HomePage" />
+              <ListItemText primary="Homepage" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
