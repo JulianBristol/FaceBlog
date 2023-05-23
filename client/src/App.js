@@ -18,6 +18,7 @@ import { darkModeState } from './darkModeState';
 import './App.css'
 import { useEffect, useState } from 'react';
 import Posts from './components/Posts/Posts';
+import NotFound from './components/NotFound';
 
 function App() {
   const [darkMode, setDarkMode] = useRecoilState(darkModeState);
@@ -75,6 +76,7 @@ function App() {
               <Route path="/Friends" exact element={<Friends />} />
               <Route path="/Settings" exact element={<Settings />} />
               <Route path="/Account" exact element={<Account />} />
+              <Route path="/*" exact element={<NotFound />} />
             </Routes>
           </Box>
           <Rightbar />
