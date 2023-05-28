@@ -4,7 +4,7 @@ import { Avatar, Box, Card, CardContent, CardMedia, Typography } from '@mui/mate
 
 const Pages = () => {
   return (
-    <div>
+    <>
       {pages.map((page, key) => (
         <Card key={key} sx={{ height: '400px', width: '400px' }}>
           <CardMedia sx={{ height: '200px', width: '400px' }}>
@@ -32,7 +32,7 @@ const Pages = () => {
           </CardContent>
         </Card>
       ))}
-    </div>
+    </>
   )
 }
 
