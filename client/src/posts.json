@@ -1,11 +1,35 @@
 [
   {
     "type": "blog",
+    "id": "Plans Finalized",
+    "title": "I took a few days off working on the blog site",
+    "date": "2023-05-28",
+    "description": [
+        "I took a couple days off to fully formulate what I want to do with this blog site.",
+        "1. All my main profiles will be added to the pages tab. So that will be my portfolio items, this current profile, and all the profiles that actually post on the webpage.",
+        "2. Friends will literally just be a bunch of randome people's images arranged to appear as if they are your friends on a social media site",
+        "3. Settings will be a bunch of settings that you can change but will effectively do absolutely nothing because users will not have access to change things on the site. BUT it will look like you are able to change things",
+        "4. Profile... This one will probably take some time to create. But it will simply be a social media profile page. This ties into the friends page and all the posts as each profile page will essentially have the styling. The only difference is the text that will be displayed and the picture."
+    ],
+    "tags": ["TBD" ]
+  },
+  {
+    "type": "blog",
+    "id": "Bugs",
+    "title": "I found a bug in the mobile version of this website",
+    "date": "2023-05-27",
+    "description": [
+        "While scrolling in mobile, if you press the \"See More\" button, and then scroll, the site will collapse the see more without you giving it the go ahead to close it. I think this bug is tied to the useEffect that controls the \"See More\" button. Unfortunately, this bug is not directly repeatable using devtools"
+    ],
+    "tags": ["bugs, Faceblog" ]
+  },
+  {
+    "type": "blog",
     "id": "FaceBlog Scope Creep",
     "title": "This is taking quite some time...",
     "date": "2023-05-22",
     "description": [
-        "I am currently working on the FaceBlog page but this is taking a long time to get anywhere. I added some the dark mode today and fixed some bugs but I am beginning to wonder if my time is better spent doing job applications or other projects. I mean, I still need to create AI profiles, the Pages page and their sublinks, the friends page and their profiles, some mock settings, and other addons.",
+        "I am currently working on the FaceBlog page but this is taking a long time to get anywhere. I added to the dark mode today and fixed some bugs but I am beginning to wonder if my time is better spent doing job applications or other projects. I mean, I still need to create AI profiles, the Pages page and their sublinks, the friends page and their profiles, some mock settings, and other addons.",
         "I was also thinking about adding a backend for this so that ChatGPT can automatically post to the backend. But at that point, this webpage will become a few days worth of code to be a fully functional social media platform. I don't have the time and money to create a full facebook clone"
     ],
     "tags": ["TBD" ]
