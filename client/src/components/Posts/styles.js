@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles((theme) => ({
     card:{
         marginBottom: '40px',
-        backgroundColor: '#f6f6f6 !important',
+        backgroundColor: '#DFDFDF !important',
         '& .MuiTypography-root': {
             color: '#202020 !important',
         }

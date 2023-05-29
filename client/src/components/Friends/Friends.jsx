@@ -4,9 +4,9 @@ import { Avatar, Box, Card, CardActions, CardContent, CardMedia, Typography } fr
 
 const Friends = () => {
   return (
-    <>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gridGap: '20px' }}>
     {friends.map((friend, key) => (
-      <Card key={key} sx={{ height: '100px', width: '400px', display: 'flex', position: 'relative' }}>
+      <Card key={key} sx={{ height: '100px', width: 'calc(50% - 10px)', display: 'flex', position: 'relative', backgroundColor: 'green' }}>
         <CardContent>
           <Box sx={{ display: 'flex', flexDirection: 'row' }}>
           <Avatar
@@ -20,12 +20,12 @@ const Friends = () => {
           </Box>
           </Box>
         </CardContent>
-        <CardActions sx={{ width: '30px', height: '100px', position: 'absolute', right: '0px', background: 'red'}}>
+        <CardActions sx={{ width: '30px', height: '100px', position: 'absolute', right: '0px', background: 'orange'}}>
           Put Icon here
         </CardActions>
       </Card>
     ))}
-    </>
+    </Box>
 )}
 
 export default Friends
