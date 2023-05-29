@@ -59,6 +59,49 @@ export default makeStyles((theme) => ({
             outline: '1px solid slategrey'
         }
     },
-
+    accountContainer:{
+        background: '#dfdfdf',
+        borderRadius: '0px 0px 5px 5px',
+        /* '@media (max-width: 380px)': {
+          width: '290px',
+        }, */
+        '& a': {
+            color: '#1976d2',
+        },
+    },
+    darkMode_AccountContainer:{
+        background: '#454545',
+        color: '#d5d5d5',
+        '& a': {
+            color: '#dcf7ab',
+        }
+    },
+    profileBanner: {
+        width: '100% !important',
+        height: '200px !important',
+        '@media (max-width: 380px)': {
+            height: '100px !important',
+        },
+    },
+    profileImg: {
+        width: '100px !important',
+        height: '100px !important',
+        margin: '10px',
+        '@media (max-width: 380px)': {
+            margin: '5px',
+            width: '75px !important',
+            height: '75px !important',
+        },
+    },
+    profileBaseText: {
+        '@media (max-width: 380px)': {
+            fontSize: '0.85rem !important',
+        },
+    },
+    profileBtn: {
+        '@media (max-width: 380px)': {
+            fontSize: '0.85rem !important',
+        },
+    },
 }
 ));

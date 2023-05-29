@@ -43,3 +43,10 @@ body::-webkit-scrollbar-thumb{
 .lightMode-bg {
     background-color: #efefef;
 }
+/* Responsiveness */
+@media screen and (max-width: 380px) {
+    .stackContainer{
+        padding: 0px !important;
+        width: 100% !important;
+    }
+}

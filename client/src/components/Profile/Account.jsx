@@ -137,33 +137,35 @@ const Account = () => {
 
   return (
     <>
-    <Box sx={{ background: '#dfdfdf' }}>
+    <Box className={`${darkMode ? classes.darkMode_AccountContainer: ''} ${classes.accountContainer} `} >
     <Avatar 
     src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     alt='Temporary'
-    sx={{ width: '100%', height: '200px'}}
+    className={classes.profileBanner}
     variant='square'
     />
-    <Box sx={{ /* backgroundColor: 'red' */ }}>
-    <Box sx={{ /* backgroundColor: 'green',  */display: 'flex' }}>
+    <Box>
+    <Box sx={{ display: 'flex', }}>
       <Avatar 
       src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       alt='temp Icon image'
-      sx={{ width: '100px', height: '100px', margin: '10px' }}
+      className={classes.profileImg}
       />
-    <Box sx={{ /* backgroundColor: 'yellow', */ width: '100%', position: 'relative', padding: '20px 10px' }}>
-      <Typography>First Name Last Name</Typography>
-      <Box sx={{ right: '0px', position: 'absolute', marginTop: '10px' }}>
-        <Button variant='contained'>Message</Button>
-        <Button variant='contained' sx={{ margin: '0 10px' }}>Add Friend</Button>
+    <Box sx={{ position: 'relative', width: '100%',  padding: '20px 10px' }}>
+      <Typography className={classes.profileBaseText}>First Name Last Name</Typography>
+      <Box sx={{ right: '0px', position: 'absolute', marginTop: '10px',  }}>
+        <Button variant='contained' className={classes.profileBtn}>Message</Button>
+        <Button variant='contained' className={classes.profileBtn} sx={{ margin: '0 10px' }}>Add Friend</Button>
       </Box>
       </Box>
     </Box>
-    <Box sx={{ display: 'flex', }}>
-      <Typography># of Friends &nbsp;</Typography>
-      <Typography># of Mutual Friends</Typography>
+    <Box sx={{ padding: '20px 20px 0px' }}>
+      <Typography className={classes.profileBaseText}># of Friends &nbsp;</Typography>
+      <Typography className={classes.profileBaseText}># of Mutual Friends</Typography>
+    <Box sx={{ marginTop: '10px' }}>
+    <a href='https://www.google.com/' target='_blank' rel="noreferrer" className={classes.profileBaseText} >Google</a>
     </Box>
-    <a href='https://www.google.com/' target='_blank' rel="noreferrer">Google</a>
+    </Box>
     </Box>
 
     <Tabs
@@ -173,7 +175,7 @@ const Account = () => {
     value={tabNum}
     variant='scrollable'
     aria-label="Profile Tab Selection"
-    sx={{ /* background: '#dfdfdf', */marginTop: '15px', borderRadius: '0px 0px 5px 5px' }}
+    sx={{ /* background: '#dfdfdf', */marginTop: '15px', borderRadius: '0px 0px 5px 5px', }}
   >
     <Tab /* className={classes.tabStyles} */ label="Posts" {...a11yProps(0)} />
     <Tab /* className={classes.tabStyles} */ label="About" {...a11yProps(1)} />
