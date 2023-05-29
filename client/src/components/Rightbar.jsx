@@ -47,7 +47,7 @@ const Rightbar = () => {
         <Typography variant="h6" fontWeight={100} className={`${darkMode ? classes.darkMode_Header6: ''}`}>
           Latest Posts
         </Typography>
-        <Box sx={{ height: 450, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '5px', overflowY: 'auto' }}>
+        <Box className={`${classes.latestPosts} ${darkMode ? classes.darkMode_ScrollBar: ''}`}>
           {itemData.map((item) => (
             <Box key={item.img}>
               <ImageListItem>

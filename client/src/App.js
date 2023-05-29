@@ -59,6 +59,8 @@ function App() {
   // Update the cookie when the darkMode state changes
   useEffect(() => {
     setCookie(cookieName, darkMode, expirationDays);
+    // Set dark mode class to the body
+    document.body.classList.toggle('dark-mode-body', darkMode);
   }, [darkMode]);
 
   return (

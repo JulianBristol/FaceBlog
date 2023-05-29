@@ -42,6 +42,23 @@ export default makeStyles((theme) => ({
             border: '2px solid #262626 !important',
         }
     },
+    latestPosts: {
+        height: 450,
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gap: '5px',
+        overflowY: 'auto'
+    },
+    darkMode_ScrollBar: {
+        '&::-webkit-scrollbar-track': {
+            boxShadow: 'inset 0 0 6px rgba(255, 255, 255, 0.454)',
+            webkitBoxShadow: 'inset 0 0 6px rgba(255, 255, 255, 0.454)'
+        },
+        '&::-webkit-scrollbar-thumb': {
+            backgroundColor: 'rgba(255, 255, 255, .16)',
+            outline: '1px solid slategrey'
+        }
+    },
 
 }
 ));

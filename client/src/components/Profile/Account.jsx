@@ -1,7 +1,10 @@
+import { useRecoilValue } from 'recoil';
+import { darkModeState } from '../../darkModeState';
 import { Avatar, Box, Button, Card, ImageList, ImageListItem, Link, Tab, Tabs, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import Friends from '../Friends/Friends';
+import makeStyles from "../styles";
 
 function TabPanel(props) {
   const { children, tabNum, index, ...other } = props;
@@ -68,6 +71,8 @@ function AboutTabProps(index) {
 }
 
 const Account = () => {
+  const darkMode = useRecoilValue(darkModeState);
+  const classes = makeStyles();
   const [tabNum, setTabNum] = useState(0);
   const [aboutTabNum, setAboutTabNum] = useState(0);
   const handleChange = (event, newTabNum) => {
@@ -255,7 +260,7 @@ const Account = () => {
 </TabPanel>
 
   <TabPanel component='div' tabNum={tabNum} index={2} >
-  <ImageList sx={{ height: 450 }} cols={3} /* rowHeight={164} */>
+  <ImageList className={`${darkMode ? classes.darkMode_ScrollBar : '' }`} sx={{ height: 450 }} cols={3} /* rowHeight={164} */>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
