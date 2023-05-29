@@ -67,7 +67,7 @@ function App() {
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-evenly">
           <Sidebar toggleDarkMode={darkMode} setToggleDarkMode={setDarkMode} handleDarkMode={handleDarkMode}/>
-          <Box flex={4} p={2}>
+          <Box flex={4} p={2} sx={{ paddingBottom: '50px' }}>
             <Routes>
               <Route path="/" exact element={<Posts />} />
               <Route path="/Projects" exact element={<Projects />} />        
