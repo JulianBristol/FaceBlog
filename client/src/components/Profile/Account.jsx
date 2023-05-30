@@ -1,6 +1,16 @@
 import { useRecoilValue } from 'recoil';
 import { darkModeState } from '../../darkModeState';
-import { Avatar, Box, Button, Card, ImageList, ImageListItem, Link, Tab, Tabs, Typography } from '@mui/material'
+import { Avatar, Box, Button, Card, ImageList, ImageListItem, Link, Tab, Tabs, Typography } from '@mui/material';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WebIcon from '@mui/icons-material/Web';
+import CakeIcon from '@mui/icons-material/Cake';
+import WorkIcon from '@mui/icons-material/Work';
+import CottageIcon from '@mui/icons-material/Cottage';
+import SchoolIcon from '@mui/icons-material/School';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import Friends from '../Friends/Friends';
@@ -192,7 +202,7 @@ const Account = () => {
 
   <TabPanel component='div' tabNum={tabNum} index={1}>
   <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}
-      sx={{ flexGrow: 1, display: 'flex', height: 224, }}
+      sx={{ flexGrow: 1, display: 'flex', height: '300px', overflowY: 'auto' }}
     >
     <Tabs
     className={`${darkMode ? classes.darkMode_TabContainer: ''} ${classes.tabContainer} `}
@@ -202,63 +212,83 @@ const Account = () => {
     value={aboutTabNum}
     orientation='vertical'
     aria-label="About Tab Selection"
-    sx={{ /* background: '#dfdfdf', */marginTop: '15px', marginBottom: '15px', borderRadius: '0px 0px 5px 5px', borderRight: 1, borderColor: 'divider', minWidth: '125px', }}
+    sx={{ /* background: '#dfdfdf', */marginTop: '15px', marginBottom: '15px', borderRadius: '0px 0px 5px 5px', borderRight: 1, borderColor: 'divider', minWidth: '125px', '& .MuiTabs-flexContainer': { height: '250px', justifyContent: 'space-evenly' } }}
   >
     <Tab /* className={classes.tabStyles} */ label="Overview" {...AboutTabProps(0)} />
     <Tab /* className={classes.tabStyles} */ label="Contact" {...AboutTabProps(1)} />
     <Tab /* className={classes.tabStyles} */ label="About" {...AboutTabProps(2)} />
   </Tabs>
 
-  <TabPanel component='div' tabNum={aboutTabNum} index={0} style={{ padding: '10px' }}>
-      <Box sx={{ display: 'flex' }}>
+  <TabPanel component='div' tabNum={aboutTabNum} index={0} style={{ padding: '10px', width: '100%' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+        <WorkIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
       <Typography variant='body'>Front End Developer at <a href='https://lykka.org/' target='_blank' rel="noreferrer">Lykka Village</a></Typography>
       </Box>
-      <Box sx={{ display: 'flex' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <SchoolIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
       <Typography variant='body'>Graduated from <a href='https://capella.edu/' target='_blank' rel="noreferrer">Capella University</a> in 2022</Typography>
       </Box>
-      <Box sx={{ display: 'flex' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <CottageIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
       <Typography variant='body'>Lives in <a href='https://goo.gl/maps/vEPLL8zREfDD56998' target='_blank' rel="noreferrer">NYC, New York</a></Typography>
       </Box>
-      <Box sx={{ display: 'flex' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <FavoriteIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
       <Typography variant='body'>Single with <a href='/Pages' >Name</a></Typography>
       </Box>
 </TabPanel>
 
-  <TabPanel component='div' tabNum={aboutTabNum} index={1} style={{ padding: '0px 10px 10px' }}>
-      <Box sx={{ display: 'flex' }}>
-      <Typography variant='body'>Phone: <a href='tel:+4753299736'>(475) 329 - 9736</a></Typography>
+  <TabPanel component='div' tabNum={aboutTabNum} index={1} style={{ padding: '10px', width: '100%' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <LocalPhoneIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+      <Typography variant='body'><a href='tel:+4753299736'>(475) 329 - 9736</a></Typography>
       </Box>
-      <Box sx={{ display: 'flex' }}>
-      <Typography variant='body'>Email: <a href='mailto:bristoljulian.r+promotions@gmail.com'>bristoljulian.r@gmail.com</a></Typography>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <EmailIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+      <Typography variant='body'><a href='mailto:bristoljulian.r+promotions@gmail.com'>bristoljulian.r@gmail.com</a></Typography>
       </Box>
-      <Box sx={{ }}>
-      <Typography variant='body'>Websites
-      <div>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <Typography variant='body'>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
+      <LinkedInIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
         <a href='https://www.linkedin.com/in/julianbristol/' target='_blank' rel="noreferrer">LinkedIn</a>
         </div>
-      <div>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
+      <GitHubIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
         <a href='https://github.com/JulianBristol' target='_blank' rel="noreferrer">Github</a>
         </div>
-      <div>
+      <div style={{ display: 'flex', alignItems: 'center', }}>
+      <WebIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
         <a href='https://www.julianbristol.netlify.app/' target='_blank' rel="noreferrer">Portfolio Page</a>
         </div>
         </Typography>
       </Box>
-      <Box sx={{ display: 'flex' }}>
-      <Typography variant='body'>Birthday</Typography>
-      </Box>
-      <Box sx={{ display: 'flex' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+      <CakeIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
       <Typography variant='body'>July 4th</Typography>
       </Box>
 </TabPanel>
 
-  <TabPanel component='div' tabNum={aboutTabNum} index={2} style={{ padding: '10px', maxHeight: '204px', maxWidth: '515px' , overflowY: 'auto' }}>
-    <Typography>Passionate and results-driven professional with a diverse background in transportation security and software development. I bring a unique perspective and a strong commitment to excellence in every endeavor. Dedicated to continuously expanding my skills and knowledge to drive innovative solutions in the technology field.</Typography>
-    <Typography>What sparked my interest in software development and led me to pursue a specialization in this field is my long-standing dream to have the knowledge and ability to manipulate computers using programming. This passion has been a driving force behind my pursuit of a bachelor's degree in Information Technology with a specialization in software development.</Typography>
-    <Typography>My experience as a transportation security officer with TSA has significantly contributed to my growth and development as a professional. It taught me the importance of teamwork and how a well-functioning team can move mountains. This experience has instilled in me a dedication to ensuring seamless human-to-human connections in all my endeavors.</Typography>
-    <Typography>During my studies and professional career, a significant project that had a profound impact on my skills and knowledge in software development was an internship turned temporary job position. It introduced me to the world of React and JavaScript, opening my eyes to new programming languages and igniting my love for continuous learning. I believe that in the ever-evolving world of technology, there will always be new things to explore and discover.</Typography>
-    <Typography>To stay up-to-date with the latest advancements and trends in the technology industry, I actively engage in reading news articles, such as Tech Brew, to stay informed. Additionally, I enjoy following tutorials on YouTube to build new projects, which not only keeps me updated but also allows me to practice and enhance my skills.</Typography>
-    <Typography>In the software development field, I am motivated by the challenges and problems that need to be solved. Building websites and programming them is not only a professional pursuit but also an entertaining and leisurely activity for me. When faced with difficult problems, I approach them with an educated guess as a first step. If that doesn't work, I use console logs to debug and analyze the issue. If further assistance is needed, I turn to the internet for similar problems and also rely on my network of friends and coworkers for support and guidance.</Typography>
+  <TabPanel component='div' tabNum={aboutTabNum} index={2} style={{ padding: '10px 20px', width: '100%' }}>
+      <Box
+      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}
+      sx={{ display: 'block', height: '260px', overflow: 'auto' }}
+      >
+    <Typography className={classes.aboutMeText}>Passionate and results-driven professional with a diverse background in transportation security and software development. I bring a unique perspective and a strong commitment to excellence in every endeavor. Dedicated to continuously expanding my skills and knowledge to drive innovative solutions in the technology field.</Typography>
+    <Typography className={classes.aboutMeText}>What sparked my interest in software development and led me to pursue a specialization in this field is my long-standing dream to have the knowledge and ability to manipulate computers using programming. This passion has been a driving force behind my pursuit of a bachelor's degree in Information Technology with a specialization in software development.</Typography>
+    <Typography className={classes.aboutMeText}>My experience as a transportation security officer with TSA has significantly contributed to my growth and development as a professional. It taught me the importance of teamwork and how a well-functioning team can move mountains. This experience has instilled in me a dedication to ensuring seamless human-to-human connections in all my endeavors.</Typography>
+    <Typography className={classes.aboutMeText}>During my studies and professional career, a significant project that had a profound impact on my skills and knowledge in software development was an internship turned temporary job position. It introduced me to the world of React and JavaScript, opening my eyes to new programming languages and igniting my love for continuous learning. I believe that in the ever-evolving world of technology, there will always be new things to explore and discover.</Typography>
+    <Typography className={classes.aboutMeText}>To stay up-to-date with the latest advancements and trends in the technology industry, I actively engage in reading news articles, such as Tech Brew, to stay informed. Additionally, I enjoy following tutorials on YouTube to build new projects, which not only keeps me updated but also allows me to practice and enhance my skills.</Typography>
+    <Typography className={classes.aboutMeText}>In the software development field, I am motivated by the challenges and problems that need to be solved. Building websites and programming them is not only a professional pursuit but also an entertaining and leisurely activity for me. When faced with difficult problems, I approach them with an educated guess as a first step. If that doesn't work, I use console logs to debug and analyze the issue. If further assistance is needed, I turn to the internet for similar problems and also rely on my network of friends and coworkers for support and guidance.</Typography>
+</Box>
 </TabPanel>
 </Box>
 </TabPanel>

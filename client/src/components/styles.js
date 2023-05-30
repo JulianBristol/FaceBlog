@@ -66,7 +66,7 @@ export default makeStyles((theme) => ({
           width: '290px',
         }, */
         '& a': {
-            color: '#1976d2',
+            color: '#005edd',
             textDecoration: 'none',
             transition: 'color 0.32s ease-out !important',
             '&:hover':{
@@ -138,7 +138,7 @@ export default makeStyles((theme) => ({
         background: '#DFDFDF',
         borderRadius: '5px',
         '& a': {
-            color: '#1976d2',
+            color: '#005edd',
             textDecoration: 'none',
             transition: 'color 0.32s ease-out !important',
             '&:hover':{
@@ -157,6 +157,28 @@ export default makeStyles((theme) => ({
                 color: '#caff69  '
             }
         }
+    },
+    profileDataItem: {
+        background: '#bababa',
+        padding: '10px',
+        borderRadius: '5px',
+        display: 'flex',
+        marginBottom: '10px',
+        alignItems: 'center !important',
+    },
+    darkMode_ProfileDataItem: {
+        background: '#1C1C1C',
+    },
+    aboutMeText: {
+        marginBottom: '10px !important',
+    },
+    profileIcon: {
+        color: '#323332',
+        fontSize: '2rem !important',
+        marginRight: '15px',
+    },
+    darkMode_ProfileIcon: {
+        color: '#DFDFDF',
     }
 }
 ));
