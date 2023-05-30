@@ -169,7 +169,7 @@ const Account = () => {
     </Box>
 
     <Tabs
-    /* className={classes.tabsStyles} */
+    className={`${darkMode ? classes.darkMode_TabContainer: ''} ${classes.tabContainer} `}
     indicatorColor="primary"
     onChange={handleChange}
     value={tabNum}
@@ -185,15 +185,17 @@ const Account = () => {
     </Box>
 
   <TabPanel component='div' tabNum={tabNum} index={0} /* style={{ padding: '0px 10px 10px' }} */>
+    <Box sx={{ marginTop: '15px', }}>
     <Card sx={{ background: '#DFDFDF' }}>testing</Card>
+    </Box>
 </TabPanel>
 
   <TabPanel component='div' tabNum={tabNum} index={1}>
-  <Box
-      sx={{ flexGrow: 1, display: 'flex', height: 224, marginTop: '15px', background: '#DFDFDF', borderRadius: '5px'  }}
+  <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}
+      sx={{ flexGrow: 1, display: 'flex', height: 224, }}
     >
     <Tabs
-    /* className={classes.tabsStyles} */
+    className={`${darkMode ? classes.darkMode_TabContainer: ''} ${classes.tabContainer} `}
     indicatorColor="primary"
     onChange={handleAboutChange}
     variant="scrollable"
@@ -262,6 +264,7 @@ const Account = () => {
 </TabPanel>
 
   <TabPanel component='div' tabNum={tabNum} index={2} >
+  <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}>
   <ImageList className={`${darkMode ? classes.darkMode_ScrollBar : '' }`} sx={{ height: 450 }} cols={3} /* rowHeight={164} */>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
@@ -274,10 +277,13 @@ const Account = () => {
         </ImageListItem>
       ))}
     </ImageList>
+  </Box>
 </TabPanel>
 
   <TabPanel component='div' tabNum={tabNum} index={3} >
+    <Box sx={{ marginTop: '15px', }}>
     <Friends friendsList={friendsList} minWidth='200px'/>
+    </Box>
 </TabPanel>
 
     </>

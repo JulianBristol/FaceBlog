@@ -67,6 +67,11 @@ export default makeStyles((theme) => ({
         }, */
         '& a': {
             color: '#1976d2',
+            textDecoration: 'none',
+            transition: 'color 0.32s ease-out !important',
+            '&:hover':{
+                color: '#be530f'
+            }
         },
     },
     darkMode_AccountContainer:{
@@ -74,6 +79,9 @@ export default makeStyles((theme) => ({
         color: '#d5d5d5',
         '& a': {
             color: '#dcf7ab',
+            '&:hover':{
+                color: '#caff69'
+            }
         }
     },
     profileBanner: {
@@ -103,5 +111,52 @@ export default makeStyles((theme) => ({
             fontSize: '0.85rem !important',
         },
     },
+    tabContainer: {
+        /* '& .MuiButtonBase-root':{
+            color: '#dfdfdf',
+        },
+        '& .MuiButtonBase-root.Mui-selected':{
+            color: '#dcf7ab',
+        },
+        '& .MuiTabs-indicator':{
+            backgroundColor: '#dcf7ab',
+        }, */
+    },
+    darkMode_TabContainer: {
+        '& .MuiButtonBase-root':{
+            color: '#dfdfdf',
+        },
+        '& .MuiButtonBase-root.Mui-selected':{
+            color: '#dcf7ab',
+        },
+        '& .MuiTabs-indicator':{
+            backgroundColor: '#dcf7ab',
+        },
+    },
+    tabStyle: {
+        marginTop: '15px',
+        background: '#DFDFDF',
+        borderRadius: '5px',
+        '& a': {
+            color: '#1976d2',
+            textDecoration: 'none',
+            transition: 'color 0.32s ease-out !important',
+            '&:hover':{
+                color: '#be530f'
+            }
+        },
+    },
+    darkMode_TabStyle: {
+        background: '#454545',
+        color: '#d5d5d5',
+        '& a': {
+            color: '#dcf7ab',
+            textDecoration: 'none',
+            transition: 'color 0.32s ease-out !important',
+            '&:hover':{
+                color: '#caff69  '
+            }
+        }
+    }
 }
 ));
