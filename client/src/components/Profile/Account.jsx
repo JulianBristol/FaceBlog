@@ -171,7 +171,7 @@ const Account = () => {
     </Box>
     <Box sx={{ padding: '20px 20px 0px' }}>
       <Typography className={classes.profileBaseText}># of Friends &nbsp;</Typography>
-      <Typography className={classes.profileBaseText}># of Mutual Friends</Typography>
+      {/* <Typography className={classes.profileBaseText}># of Mutual Friends</Typography> */}
     <Box sx={{ marginTop: '10px' }}>
     <a href='https://www.google.com/' target='_blank' rel="noreferrer" className={classes.profileBaseText} >Google</a>
     </Box>

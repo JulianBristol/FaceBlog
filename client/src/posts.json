@@ -1,6 +1,24 @@
 [
   {
     "type": "blog",
+    "id": "darkmode profile",
+    "title": "Updates and decisions",
+    "date": "2023-05-30",
+    "description": [
+        "I started working on the profile view yesterday and it is really coming together! I am loving the color combination that I chose for it. I pretty much code exclusively in dark mode now.",
+        "I also made decision to create a backend for all this. However, creating the backend won't happen for quite some time. I have a few other responsibilities to take care of before I move into creating a MERN stack for this. I've still got to make a few more pages for this website, finish the Searcy Water Utilities page with Zach, complete some long overdue certifications in freecodecamp, and do some other projects. I am thinking that I will put most of my focus into completing the next few pages of this then come back and work on the backend when things slow down a little here.",
+        "After spending some time and thinking about it, creating a backend for this won't be all that much work. Since my data is already stored in Json files, migrating them to MongoDB will be a cakewalk. Also, since this project does not use have a ton of users (or any users) I can make the backend fairly barebones."
+    ],
+    "itemData": [
+          {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1685415658/FaceBlog%20App/Faceblog_Dark_mode_luswzi.png",
+              "title": "profile teaser X dark mode"
+            }
+    ],
+    "tags": ["TBD" ]
+  },
+  {
+    "type": "blog",
     "id": "Plans Finalized",
     "title": "I took a few days off working on the blog site",
     "date": "2023-05-28",

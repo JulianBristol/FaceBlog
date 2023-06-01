@@ -21,7 +21,6 @@ import {
   import WebIcon from '@mui/icons-material/Web';
   import GitHubIcon from '@mui/icons-material/GitHub';
   import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-  import ProfilePicture from "../../images/avatar/Profile Picture.jpg";
   import posts from "../../posts.json";
   import profiles from "../../profiles.json";
   import { useState } from "react";
@@ -40,22 +39,6 @@ import {
         console.log("handleClick");
         console.log(liveLink, github);
     })
-
-    /* const profiles = {
-        "portfolio": {
-            "name": "Julian Bristol",
-            "initials": "JB",
-            "img": ProfilePicture,
-            "alt": "Julian Bristol's profile picture"
-        },
-        
-        "blog": {
-            "name": "test",
-            "initials": "Test",
-            "img": ProfilePicture,
-            "alt": "test's profile picture"
-        },
-    } */
     
     const addRemoveFavorites = checked
       ? "Add to favorites"
@@ -142,6 +125,9 @@ import {
                         src={profiles[post.type].img}
                         alt={profiles[post.type].alt}
                         aria-label="Profile Picture"
+                        onClick={() => {
+                          window.open(profiles[post.type].faceblog, "_self");
+                        }}
                       >
                         {profiles[post.type].initials}
                       </Avatar>
