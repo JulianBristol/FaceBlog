@@ -145,6 +145,7 @@ const Account = ({account, posts}) => {
   ];
   
   const schoolStatus = ['Attending', 'Graduated', 'Dropped out', 'Will be attending', ]
+  const relationshipStatus = ['In a Relationship', 'Single', 'Married', 'It\'s complicated', 'FWB', 'Divorced' ]
   const friendsList = ['test1', 'test2', 'test3', 'test4', 'test5']
 
   return (
@@ -260,7 +261,8 @@ const Account = ({account, posts}) => {
       <Typography variant='body'>{account.jobTitle}
       {account.employer !== undefined ? 
       <>
-      &nbsp;at <a href={account.employerLink} target='_blank' rel="noreferrer">{account.employer}</a>
+      &nbsp;at {account.employerLink !== undefined ? <a href={account.employerLink} target='_blank' rel="noreferrer">{account.employer}</a>
+      : <>{account.employer}</>}
       </> : ''}
       </Typography>
       </Box>
@@ -275,7 +277,10 @@ const Account = ({account, posts}) => {
       {account.school !== undefined ? 
       <>
       {account.schoolStatus === 1 || account.schoolStatus === 2 ? ' from ' : ' '}
+      {account.schoolLink !== undefined ? 
       <a href={account.schoolLink} target='_blank' rel="noreferrer">{account.school}</a>
+      :
+      <>{account.school}</>}
       </>
       : ''
       } 
@@ -291,7 +296,12 @@ const Account = ({account, posts}) => {
     <Box
     className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
     <CottageIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-    <Typography variant='body'>Lives in <a href='https://goo.gl/maps/vEPLL8zREfDD56998' target='_blank' rel="noreferrer">NYC, New York</a></Typography>
+    <Typography variant='body'>Lives in&nbsp;
+    {account.homeLink !== undefined ?
+    <a href={account.homeLink} target='_blank' rel="noreferrer">{account.home}</a>
+    :
+    <>{account.home}</>}
+    </Typography>
     </Box>
     : ''}
       
@@ -299,7 +309,15 @@ const Account = ({account, posts}) => {
     <Box
     className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
     <FavoriteIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-    <Typography variant='body'>Single with <a href='/Pages' >Name</a></Typography>
+    <Typography variant='body'>{relationshipStatus[account.relationship]} 
+    {account.relationshipName !== undefined && account.relationship !== 1 ? 
+    <>
+    {account.relationship === 0 || account.relationship === 3 || account.relationship === 4 ? ' with ' : ''}
+    {account.relationship === 0 || account.relationship === 5 ? ' to ' : ''}
+    {account.relationshipLink !== undefined ? <a href={account.relationshipLink}>{account.relationshipName}</a>
+    : <>{account.relationshipName}</>}
+    </> : ''}
+    </Typography>
     </Box>
     : ''}
       

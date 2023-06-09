@@ -14,8 +14,9 @@
         "graduationYear": "2022",
         "home": "NYC, New York",
         "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
-        "relationship": "Single",
-        "relationshipLink": "http://localhost:3000/Pages",
+        "relationship": 1,
+        "relationshipName": "Suzie",
+        "relationshipLink": "http://localhost:3000/Pagels",
         "friends": [
             "/users/JulianBristol",
             "/users/JulianBristol",
