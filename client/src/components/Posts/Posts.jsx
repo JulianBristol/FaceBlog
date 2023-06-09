@@ -21,12 +21,12 @@ import {
   import WebIcon from '@mui/icons-material/Web';
   import GitHubIcon from '@mui/icons-material/GitHub';
   import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-  import ProfilePicture from "../../images/avatar/Profile Picture.jpg";
   import posts from "../../posts.json";
   import profiles from "../../profiles.json";
   import { useState } from "react";
   import makeStyles from "./styles";
   import PostDescriptions from "./PostDescriptions";
+import DateParser from '../DateParser';
   
   const Posts = ({overridePosts, post}) => {
   const darkMode = useRecoilValue(darkModeState);
@@ -40,22 +40,6 @@ import {
         console.log("handleClick");
         console.log(liveLink, github);
     })
-
-    /* const profiles = {
-        "portfolio": {
-            "name": "Julian Bristol",
-            "initials": "JB",
-            "img": ProfilePicture,
-            "alt": "Julian Bristol's profile picture"
-        },
-        
-        "blog": {
-            "name": "test",
-            "initials": "Test",
-            "img": ProfilePicture,
-            "alt": "test's profile picture"
-        },
-    } */
     
     const addRemoveFavorites = checked
       ? "Add to favorites"
@@ -99,36 +83,6 @@ import {
       );
     }
 
-    function getOrdinalSuffix(day) {
-      if (day >= 11 && day <= 13) {
-        return 'th';
-      }
-    
-      switch (day % 10) {
-        case 1:
-          return 'st';
-        case 2:
-          return 'nd';
-        case 3:
-          return 'rd';
-        default:
-          return 'th';
-      }
-    }
-    
-    const parseDate = ((dateStr) => {
-      const date = new Date(`${dateStr}T00:00:00`);
-      const options = { month: 'long', day: 'numeric', year: 'numeric' };
-
-      const formattedDate = date.toLocaleDateString('en-US', options);
-      const ordinalSuffix = getOrdinalSuffix(date.getDate());
-
-      const result = formattedDate.replace(/(\d+)/, `$1${ordinalSuffix}`);
-
-      return result;
-
-    })
-
     return(
         <>
         {posts.map((post, key) => {
@@ -142,6 +96,9 @@ import {
                         src={profiles[post.type].img}
                         alt={profiles[post.type].alt}
                         aria-label="Profile Picture"
+                        onClick={() => {
+                          window.open(profiles[post.type].faceblog, "_self");
+                        }}
                       >
                         {profiles[post.type].initials}
                       </Avatar>
@@ -178,7 +135,7 @@ import {
                     }
                       </span>}
                     </div>}
-                    subheader={parseDate(post.date)}
+                    subheader={DateParser(post.date)}
                   />
                   {post.itemData ? <CardMedia>
                     <QuiltedImageList itemData={post.itemData}/>

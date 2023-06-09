@@ -19,8 +19,12 @@ import './App.css'
 import { useEffect, useState } from 'react';
 import Posts from './components/Posts/Posts';
 import NotFound from './components/NotFound';
+import profiles from './profiles.json';
+import posts from './posts.json';
 
 function App() {
+  const [account, setAccount] = useState({});
+  const [accountPoster, setAccountPoster] = useState('');
   const [darkMode, setDarkMode] = useRecoilState(darkModeState);
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -59,15 +63,25 @@ function App() {
   // Update the cookie when the darkMode state changes
   useEffect(() => {
     setCookie(cookieName, darkMode, expirationDays);
+    // Set dark mode class to the body
+    document.body.classList.toggle('dark-mode-body', darkMode);
   }, [darkMode]);
+
+  //Set initial account to user account
+  useState(() => {
+    setAccountPoster('portfolio')
+    setAccount(profiles.portfolio);
+  }, [])
+  
+  const accountPosts = posts.filter(obj => obj.type === accountPoster)
 
   return (
     <Box className={`root ${darkMode ? 'darkMode-bg' : 'lightMode-bg'}`}>
       <Router>
         <Navbar />
-        <Stack direction="row" spacing={2} justifyContent="space-evenly">
+        <Stack direction="row" spacing={{xs: 0, sm:2}} justifyContent="space-evenly">
           <Sidebar toggleDarkMode={darkMode} setToggleDarkMode={setDarkMode} handleDarkMode={handleDarkMode}/>
-          <Box flex={4} p={2}>
+          <Box flex={4} p={2} className='stackContainer' sx={{ paddingBottom: '50px' }}>
             <Routes>
               <Route path="/" exact element={<Posts />} />
               <Route path="/Projects" exact element={<Projects />} />        
@@ -75,7 +89,7 @@ function App() {
               <Route path="/Pages" exact element={<Pages />} />
               <Route path="/Friends" exact element={<Friends />} />
               <Route path="/Settings" exact element={<Settings />} />
-              <Route path="/Account" exact element={<Account />} />
+              <Route path="/Account" exact element={<Account account={account} posts={accountPosts}/>} />
               <Route path="/*" exact element={<NotFound />} />
             </Routes>
           </Box>

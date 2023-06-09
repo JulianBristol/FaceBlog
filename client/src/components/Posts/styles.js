@@ -22,6 +22,9 @@ export default makeStyles((theme) => ({
             width: '75px',
             height: '75px',
             outline: '1px solid black',
+            '&:hover': {
+                cursor: 'pointer'
+            }
         },
         '& .MuiCardHeader-title':{
         fontSize: '1.2rem',
