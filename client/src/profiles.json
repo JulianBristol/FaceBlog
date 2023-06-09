@@ -1,9 +1,9 @@
 {
     "portfolio": {
-        "named": "Julian Bristol",
+        "name": "Julian Bristol",
         "initials": "JB",
         "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783391/FaceBlog%20App/PXL_20221002_135603827_2_nqm1ok.jpg",
-        "alt": "Julian Bristol's profile picture",
+        "banner": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "faceblog": "/Account",
         "jobTitle": "Front End Developer",
         "employer": "Lykka Village",
@@ -40,8 +40,8 @@
             "/users/JulianBristol",
             "/users/JulianBristol"
         ],
-        "website": "https://www.julianbristol.netlify.app/",
-        "websiteName": "PortfolioPage",
+        "website": "https://julianbristol.netlify.app/",
+        "websiteName": "Portfolio Page",
         "github": "https://github.com/JulianBristol",
         "linkedin": "https://www.linkedin.com/in/julianbristol/",
         "email": "bristoljulian.r@gmail.com",
@@ -58,7 +58,7 @@
         ]
     },
     "blog": {
-        "named": "Julian R. Bristol",
+        "name": "Julian R. Bristol",
         "initials": "JB",
         "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783381/FaceBlog%20App/Professional_Profile_Picture_wl83ka.jpg",
         "alt": "Julian Bristol's profile picture",

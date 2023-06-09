@@ -80,7 +80,7 @@ function AboutTabProps(index) {
   };
 }
 
-const Account = () => {
+const Account = ({account}) => {
   const darkMode = useRecoilValue(darkModeState);
   const classes = makeStyles();
   const [tabNum, setTabNum] = useState(0);
@@ -91,7 +91,7 @@ const Account = () => {
   const handleAboutChange = (event, newTabNum) => {
     setAboutTabNum(newTabNum);
   };
-
+  
   const itemData = [
     {
       img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
@@ -149,32 +149,63 @@ const Account = () => {
     <>
     <Box className={`${darkMode ? classes.darkMode_AccountContainer: ''} ${classes.accountContainer} `} >
     <Avatar 
-    src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    alt='Temporary'
+    src={account.banner}
+    alt={`${account.name}'s banner`}
     className={classes.profileBanner}
     variant='square'
     />
     <Box>
     <Box sx={{ display: 'flex', }}>
       <Avatar 
-      src='https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      alt='temp Icon image'
+      src={account.img}
+      alt={`${account.name}'s profile picture`}
       className={classes.profileImg}
       />
     <Box sx={{ position: 'relative', width: '100%',  padding: '20px 10px' }}>
-      <Typography className={classes.profileBaseText}>First Name Last Name</Typography>
+      <Typography className={classes.profileBaseText}>{account.name}</Typography>
       <Box sx={{ right: '0px', position: 'absolute', marginTop: '10px',  }}>
+        {account.name === 'Julian Bristol' ? '' : <>
         <Button variant='contained' className={classes.profileBtn}>Message</Button>
         <Button variant='contained' className={classes.profileBtn} sx={{ margin: '0 10px' }}>Add Friend</Button>
+        </>}
       </Box>
       </Box>
     </Box>
-    <Box sx={{ padding: '20px 20px 0px' }}>
-      <Typography className={classes.profileBaseText}># of Friends &nbsp;</Typography>
+    <Box sx={{ padding: '0px 20px 0px', display: 'flex'}}>
+      <a className={`${classes.profileBaseText} ${classes.portfolioLinks}`} onClick={() => {
+        setTabNum(3)
+      }}>
+        <Typography className={classes.profileBaseText}>{account.friends.length} Friends</Typography>
+        </a>
+
       {/* <Typography className={classes.profileBaseText}># of Mutual Friends</Typography> */}
-    <Box sx={{ marginTop: '10px' }}>
-    <a href='https://www.google.com/' target='_blank' rel="noreferrer" className={classes.profileBaseText} >Google</a>
-    </Box>
+
+      {account.website !== undefined ? 
+      <a href={account.website} target='_blank' rel="noreferrer" className={`${classes.profileBaseText} ${classes.portfolioLinks}`}>
+        {account.website === 'https://julianbristol.netlify.app/' ?
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='86.4 -0.22 7.8 7.8' className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}>
+        <path
+        d='M91.9,1.366a2.777,2.777,0,0,0-3.57.435.349.349,0,0,0,.147.569l.337.112a.342.342,0,0,0,.35-.078,1.758,1.758,0,0,1,2.529.121.351.351,0,0,0,.493.033l.4-.348a.35.35,0,0,1,.542.109,3.083,3.083,0,0,1-1.274,4.062.346.346,0,0,0-.173.377l.013.063a.349.349,0,0,0,.51.235,3.84,3.84,0,0,0,1.018-5.94.35.35,0,0,0-.491-.028l-.266.236a.461.461,0,0,1-.569.042ZM88.7,3.118a1.736,1.736,0,0,0-.093.566,1.759,1.759,0,0,0,1.253,1.685.34.34,0,0,1,.242.264l.073.348a.35.35,0,0,1-.419.412,2.778,2.778,0,0,1-2.167-2.709c0-.057,0-.113,0-.169a.462.462,0,0,0-.319-.471l-.338-.112a.351.351,0,0,1-.223-.44A3.842,3.842,0,0,1,92.371.407a.338.338,0,0,1,.166.267.338.338,0,0,1-.116.292l-.047.042a.344.344,0,0,1-.414.039,3.079,3.079,0,0,0-4.153.928.349.349,0,0,0,.176.524l.5.176a.35.35,0,0,1,.217.443Zm2.01,2.293a1.77,1.77,0,0,0,1.414-1.727,1.811,1.811,0,0,0-.046-.406.341.341,0,0,1,.107-.341l.266-.237a.35.35,0,0,1,.566.158,2.78,2.78,0,0,1-1.412,3.311.461.461,0,0,0-.248.512l.072.348a.351.351,0,0,1-.271.413,3.843,3.843,0,0,1-4.633-3.758c0-.032,0-.064,0-.1a.35.35,0,0,1,.459-.324l.061.021a.346.346,0,0,1,.24.338v.06A3.079,3.079,0,0,0,90.17,6.757a.349.349,0,0,0,.365-.415c-.033-.173-.065-.346-.1-.521A.351.351,0,0,1,90.713,5.411Z'>
+            </path>
+            <path
+            d='M 90.368 4.8 A 1.12 1.12 0 1 0 89.248 3.68 A 1.122 1.122 0 0 0 90.368 4.8 Z'>
+                </path>
+       </svg> : 
+        <WebIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/> 
+        }
+        {account.websiteName}
+      </a> : ''}
+
+      {account.github !== undefined ?
+      <a href={account.github} target='_blank' rel="noreferrer" className={`${classes.profileBaseText} ${classes.portfolioLinks}`}>
+        <GitHubIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+        Github
+      </a> : ''}
+
+      {account.linkedin !== undefined ? <a href={account.linkedin} target='_blank' rel="noreferrer" className={`${classes.profileBaseText} ${classes.portfolioLinks}`}>
+        <LinkedInIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+        LinkedIn
+      </a> : ''}
     </Box>
     </Box>
 
@@ -202,7 +233,7 @@ const Account = () => {
 
   <TabPanel component='div' tabNum={tabNum} index={1}>
   <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}
-      sx={{ flexGrow: 1, display: 'flex', height: '300px', overflowY: 'auto' }}
+      sx={{ flexGrow: 1, display: 'flex', }}
     >
     <Tabs
     className={`${darkMode ? classes.darkMode_TabContainer: ''} ${classes.tabContainer} `}
@@ -295,7 +326,7 @@ const Account = () => {
 
   <TabPanel component='div' tabNum={tabNum} index={2} >
   <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}>
-  <ImageList className={`${darkMode ? classes.darkMode_ScrollBar : '' }`} sx={{ height: 450 }} cols={3} /* rowHeight={164} */>
+  <ImageList className={`${darkMode ? classes.darkMode_ScrollBar : '' }`} cols={3} /* rowHeight={164} */>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img

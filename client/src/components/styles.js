@@ -42,6 +42,17 @@ export default makeStyles((theme) => ({
             border: '2px solid #262626 !important',
         }
     },
+    portfolioLinks: {
+        marginRight: '15px',
+        padding: '15px',
+        borderRadius: '5px',
+        display: 'flex',
+        alignItems: 'center',
+        transition: 'all 0.32s ease-in-out !important',
+        '&:hover':{
+            background: '#00000055',
+        }
+    },
     latestPosts: {
         height: 450,
         display: 'grid',
@@ -66,11 +77,17 @@ export default makeStyles((theme) => ({
           width: '290px',
         }, */
         '& a': {
-            color: '#005edd',
+            color: '#004285',
             textDecoration: 'none',
-            transition: 'color 0.32s ease-out !important',
+            cursor: 'pointer',
+            '& svg':{
+                transition: 'fill 0.32s ease-out !important',
+            },
             '&:hover':{
-                color: '#be530f'
+                color: '#000',
+                '& svg':{
+                    fill: '#000',
+                }
             }
         },
     },
@@ -80,7 +97,10 @@ export default makeStyles((theme) => ({
         '& a': {
             color: '#dcf7ab',
             '&:hover':{
-                color: '#caff69'
+                color: '#caff69',
+                '& svg':{
+                    fill: '#fff',
+                }
             }
         }
     },
@@ -138,11 +158,11 @@ export default makeStyles((theme) => ({
         background: '#DFDFDF',
         borderRadius: '5px',
         '& a': {
-            color: '#005edd',
+            color: '#004285',
             textDecoration: 'none',
-            transition: 'color 0.32s ease-out !important',
             '&:hover':{
-                color: '#be530f'
+                color: '#780707',
+                fontweight: '900',
             }
         },
     },
@@ -159,7 +179,7 @@ export default makeStyles((theme) => ({
         }
     },
     profileDataItem: {
-        background: '#bababa',
+        background: '#cbcbcb',
         padding: '10px',
         borderRadius: '5px',
         display: 'flex',
@@ -174,11 +194,13 @@ export default makeStyles((theme) => ({
     },
     profileIcon: {
         color: '#323332',
+        fill: '#323332',
         fontSize: '2rem !important',
         marginRight: '15px',
     },
     darkMode_ProfileIcon: {
         color: '#DFDFDF',
+        fill: '#DFDFDF',
     }
 }
 ));
