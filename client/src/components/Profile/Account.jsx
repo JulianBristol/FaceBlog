@@ -144,6 +144,7 @@ const Account = ({account, posts}) => {
     },
   ];
   
+  const schoolStatus = ['Attending', 'Graduated', 'Dropped out', 'Will be attending', ]
   const friendsList = ['test1', 'test2', 'test3', 'test4', 'test5']
 
   return (
@@ -252,26 +253,59 @@ const Account = ({account, posts}) => {
   </Tabs>
 
   <TabPanel component='div' tabNum={aboutTabNum} index={0} style={{ padding: '10px', width: '100%' }}>
-      <Box
+    {account.jobTitle !== undefined ? 
+    <Box
       className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
         <WorkIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'>Front End Developer at <a href='https://lykka.org/' target='_blank' rel="noreferrer">Lykka Village</a></Typography>
+      <Typography variant='body'>{account.jobTitle}
+      {account.employer !== undefined ? 
+      <>
+      &nbsp;at <a href={account.employerLink} target='_blank' rel="noreferrer">{account.employer}</a>
+      </> : ''}
+      </Typography>
       </Box>
-      <Box
-      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
-      <SchoolIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'>Graduated from <a href='https://capella.edu/' target='_blank' rel="noreferrer">Capella University</a> in 2022</Typography>
-      </Box>
-      <Box
-      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
-      <CottageIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'>Lives in <a href='https://goo.gl/maps/vEPLL8zREfDD56998' target='_blank' rel="noreferrer">NYC, New York</a></Typography>
-      </Box>
-      <Box
-      className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
-      <FavoriteIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'>Single with <a href='/Pages' >Name</a></Typography>
-      </Box>
+    : ''}
+      
+    {account.school !== undefined ? 
+    <Box
+    className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+    <SchoolIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+    <Typography variant='body'>
+      {schoolStatus[account.schoolStatus]}
+      {account.school !== undefined ? 
+      <>
+      {account.schoolStatus === 1 || account.schoolStatus === 2 ? ' from ' : ' '}
+      <a href={account.schoolLink} target='_blank' rel="noreferrer">{account.school}</a>
+      </>
+      : ''
+      } 
+      {account.graduationYear !== undefined ? 
+      <>
+      &nbsp;in {account.graduationYear}
+      </> : ''}
+      </Typography>
+    </Box>
+    : ''}
+      
+    {account.home !== undefined ? 
+    <Box
+    className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+    <CottageIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+    <Typography variant='body'>Lives in <a href='https://goo.gl/maps/vEPLL8zREfDD56998' target='_blank' rel="noreferrer">NYC, New York</a></Typography>
+    </Box>
+    : ''}
+      
+    {account.relationship !== undefined ? 
+    <Box
+    className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
+    <FavoriteIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
+    <Typography variant='body'>Single with <a href='/Pages' >Name</a></Typography>
+    </Box>
+    : ''}
+      
+      
+      
+      
 </TabPanel>
 
   <TabPanel component='div' tabNum={aboutTabNum} index={1} style={{ padding: '10px', width: '100%' }}>
