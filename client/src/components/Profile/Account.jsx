@@ -15,6 +15,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import Friends from '../Friends/Friends';
 import makeStyles from "../styles";
+import Posts from '../Posts/Posts';
 
 function TabPanel(props) {
   const { children, tabNum, index, ...other } = props;
@@ -80,7 +81,7 @@ function AboutTabProps(index) {
   };
 }
 
-const Account = ({account}) => {
+const Account = ({account, posts}) => {
   const darkMode = useRecoilValue(darkModeState);
   const classes = makeStyles();
   const [tabNum, setTabNum] = useState(0);
@@ -227,7 +228,7 @@ const Account = ({account}) => {
 
   <TabPanel component='div' tabNum={tabNum} index={0} /* style={{ padding: '0px 10px 10px' }} */>
     <Box sx={{ marginTop: '15px', }}>
-    <Card sx={{ background: '#DFDFDF' }}>testing</Card>
+    <Posts overridePosts={true} post={posts}/>
     </Box>
 </TabPanel>
 
@@ -311,7 +312,7 @@ const Account = ({account}) => {
   <TabPanel component='div' tabNum={aboutTabNum} index={2} style={{ padding: '10px 20px', width: '100%' }}>
       <Box
       className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}
-      sx={{ display: 'block', height: '260px', overflow: 'auto' }}
+      sx={{ display: 'block', overflow: 'auto' }}
       >
     <Typography className={classes.aboutMeText}>Passionate and results-driven professional with a diverse background in transportation security and software development. I bring a unique perspective and a strong commitment to excellence in every endeavor. Dedicated to continuously expanding my skills and knowledge to drive innovative solutions in the technology field.</Typography>
     <Typography className={classes.aboutMeText}>What sparked my interest in software development and led me to pursue a specialization in this field is my long-standing dream to have the knowledge and ability to manipulate computers using programming. This passion has been a driving force behind my pursuit of a bachelor's degree in Information Technology with a specialization in software development.</Typography>

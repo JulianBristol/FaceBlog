@@ -5,6 +5,18 @@
     "title": "Updates and decisions",
     "date": "2023-05-30",
     "description": [
+        "Since my last post, I have reworked my resume and taken a course in SEO practices. After listening to the recommendations, I have actually seen some results and they are remarkable!",
+        "For one, I installed Google analytics on my sites to see what traction it gets. Since I pride myself on being an evil scientist, I had a control, which was my previous resume. Most of my sites didn’t receive a single hit. In a one week period, sending out many applications, I only received one view. After making these keyword changes to my resume, the number of views that my site received is eight. Its only been a few days. Not even a full week yet.",
+        "Now this experiment already has some built in bias. Obviously, I am working with one resume so jobs that received my resume earlier but looked at it later can influence my experiment. Nonetheless, the changes that I did to my resume only make it look more professional and the information that I learned about SEO and how keywords impacts resumes is not unknown. I just never fully understood how important those keywords were or how to optimize my resume with them."
+    ],
+    "tags": ["TBD" ]
+  },
+  {
+    "type": "blog",
+    "id": "darkmode profile",
+    "title": "Updates and decisions",
+    "date": "2023-05-30",
+    "description": [
         "I started working on the profile view yesterday and it is really coming together! I am loving the color combination that I chose for it. I pretty much code exclusively in dark mode now.",
         "I also made decision to create a backend for all this. However, creating the backend won't happen for quite some time. I have a few other responsibilities to take care of before I move into creating a MERN stack for this. I've still got to make a few more pages for this website, finish the Searcy Water Utilities page with Zach, complete some long overdue certifications in freecodecamp, and do some other projects. I am thinking that I will put most of my focus into completing the next few pages of this then come back and work on the backend when things slow down a little here.",
         "After spending some time and thinking about it, creating a backend for this won't be all that much work. Since my data is already stored in Json files, migrating them to MongoDB will be a cakewalk. Also, since this project does not use have a ton of users (or any users) I can make the backend fairly barebones."
