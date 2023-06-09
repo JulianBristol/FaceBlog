@@ -16,6 +16,7 @@ import PropTypes from 'prop-types';
 import Friends from '../Friends/Friends';
 import makeStyles from "../styles";
 import Posts from '../Posts/Posts';
+import DateParser from '../DateParser';
 
 function TabPanel(props) {
   const { children, tabNum, index, ...other } = props;
@@ -327,38 +328,68 @@ const Account = ({account, posts}) => {
 </TabPanel>
 
   <TabPanel component='div' tabNum={aboutTabNum} index={1} style={{ padding: '10px', width: '100%' }}>
+    {account.phone !== undefined ?
       <Box
       className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
       <LocalPhoneIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'><a href='tel:+4753299736'>(475) 329 - 9736</a></Typography>
+      <Typography variant='body'><a href={`tel:+${account.phone}`}>{account.phone}</a></Typography>
       </Box>
+      : ''
+      }
+
+      {account.email !== undefined ?
       <Box
       className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
       <EmailIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'><a href='mailto:bristoljulian.r+promotions@gmail.com'>bristoljulian.r@gmail.com</a></Typography>
+      <Typography variant='body'><a href={`mailto:${account.email}`}>{account.email}</a></Typography>
       </Box>
+      : ''
+      }
+
+      {account.website !== undefined || account.github !== undefined ||
+      account.linkedin !== undefined ?
       <Box
       className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
       <Typography variant='body'>
+        {account.linkedin !== undefined ?
+        <>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
       <LinkedInIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-        <a href='https://www.linkedin.com/in/julianbristol/' target='_blank' rel="noreferrer">LinkedIn</a>
+        <a href={account.linkedin}target='_blank' rel="noreferrer">LinkedIn</a>
         </div>
+        </> : ''}
+        {account.github !== undefined ?
+        <>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px'}}>
       <GitHubIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-        <a href='https://github.com/JulianBristol' target='_blank' rel="noreferrer">Github</a>
+        <a href={account.github} target='_blank' rel="noreferrer">Github</a>
         </div>
+        </> : ''}
+        {account.website !== undefined ?
+        <>
       <div style={{ display: 'flex', alignItems: 'center', }}>
       <WebIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-        <a href='https://www.julianbristol.netlify.app/' target='_blank' rel="noreferrer">Portfolio Page</a>
+        <a href={account.website} target='_blank' rel="noreferrer">{account.websiteName}</a>
         </div>
+        </> : ''}
         </Typography>
       </Box>
+      : ''
+      }
+
+      {account.dob !== undefined ?
       <Box
       className={`${darkMode ? classes.darkMode_ProfileDataItem: ''} ${classes.profileDataItem} `}>
       <CakeIcon className={`${darkMode ? classes.darkMode_ProfileIcon: ''} ${classes.profileIcon} `}/>
-      <Typography variant='body'>July 4th</Typography>
+      <Typography variant='body'>{DateParser(account.dob)}</Typography>
       </Box>
+      : ''
+      }
+
+      
+      
+      
+      
 </TabPanel>
 
   <TabPanel component='div' tabNum={aboutTabNum} index={2} style={{ padding: '10px 20px', width: '100%' }}>
