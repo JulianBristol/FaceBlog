@@ -108,6 +108,7 @@ const Account = ({account, posts}) => {
   const handleOpenPostModal = (postID) => {
     setOpen(true)
     console.log(`I clicked on ${postID}`)
+    setSinglePost(posts.filter(post => post.id === postID));
   };
   const handleClosePostModal = (postID) => {
     setOpen(false)
@@ -422,6 +423,7 @@ const Account = ({account, posts}) => {
     onClose={handleClosePostModal}
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
+    sx={{ overflow: "auto" }}
     >
       <Box className={`${darkMode ? classes.darkMode_PostModal: ''} ${classes.postModal} `}>
         <Posts overridePosts={true} post={singlePost}/>

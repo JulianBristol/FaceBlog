@@ -203,10 +203,8 @@ export default makeStyles((theme) => ({
         fill: '#DFDFDF',
     },
     postModal: {
-        backgroundColor: '#454141',
-        width: '80vw',
-        height: '300px',
-        margin: 'calc(50vh - 200px) auto'
+        width: '40vw',
+        margin: '10vh auto'
     },
     darkMode_PostModal: {
 
