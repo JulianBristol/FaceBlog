@@ -201,6 +201,13 @@ export default makeStyles((theme) => ({
     darkMode_ProfileIcon: {
         color: '#DFDFDF',
         fill: '#DFDFDF',
-    }
+    },
+    postModal: {
+        width: '40vw',
+        margin: '10vh auto'
+    },
+    darkMode_PostModal: {
+
+    },
 }
 ));

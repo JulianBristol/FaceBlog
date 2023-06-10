@@ -1,30 +1,60 @@
-import React from 'react'
-import friends from '../../friends.json';
-import { Avatar, Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+import { useRecoilValue } from 'recoil';
+import { darkModeState } from '../../darkModeState';
+import React, { useEffect, useState } from 'react'
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import profiles from '../../profiles.json';
+import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Tooltip, Typography } from '@mui/material';
+import makeStyles from "../../base_styles";
 
-const Friends = () => {
+const Friends = ({overrideFriends, friends}) => {
+  const darkMode = useRecoilValue(darkModeState);
+  const classes = makeStyles();
+  const [friendsList, setFriendsList] = useState([]);
+  const defaultFriends = profiles.portfolio.friends;
+  useEffect(() => {
+    overrideFriends ? setFriendsList(friends) : setFriendsList(defaultFriends);
+  },[])
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gridGap: '20px' }}>
-    {friends.map((friend, key) => (
-      <Card key={key} sx={{ height: '100px', width: 'calc(50% - 10px)', display: 'flex', position: 'relative', backgroundColor: 'green' }}>
-        <CardContent>
-          <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+    {friendsList.map((friend, key) => {
+      return (
+      <Card key={key} className={`${classes.card} ${darkMode ? classes.darkMode_Card : classes.lightMode_Card}`} sx={{ height: '100px', width: 'calc(50% - 10px)', display: 'grid', position: 'relative', }}>
+        <CardHeader
+        className={`${classes.postHeader} ${darkMode ? classes.darkMode_PostHeader : ''}`} 
+          avatar={
+            <Tooltip title={profiles[friend]?.name}>
           <Avatar
-            src={"https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg"}
-            alt={"imagessdfs"}
+            src={profiles[friend]?.img}
+            alt={`${profiles[friend].name}'s Profile Picture`}
+            aria-label="Profile Picture"
             sx={{ width: '75px', height: '75px'}}
-          />
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography>Page Name</Typography>
-            <Typography>Type of Page</Typography>
-          </Box>
-          </Box>
-        </CardContent>
-        <CardActions sx={{ width: '30px', height: '100px', position: 'absolute', right: '0px', background: 'orange'}}>
-          Put Icon here
-        </CardActions>
+            onClick={() => {
+              window.open(profiles[friend]?.faceblog, "_self");
+            }}
+          >
+          </Avatar>
+          </Tooltip>
+          }
+          title={
+            <Typography variant='h5'>
+              {profiles[friend].name}
+            </Typography>
+          }
+          /* subheader={
+            <Typography variant='p'>
+              Mutual Friends:
+            </Typography>
+          } */
+          action={
+            <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="More Options" aria-label="settings" >
+              <MoreVertIcon />
+            </IconButton>
+          }
+        >
+        </CardHeader>
       </Card>
-    ))}
+    )
+      })}
     </Box>
 )}
 

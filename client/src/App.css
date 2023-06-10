@@ -43,6 +43,9 @@ body::-webkit-scrollbar-thumb{
 .lightMode-bg {
     background-color: #efefef;
 }
+.mediaImage{
+    cursor: pointer;
+}
 /* Responsiveness */
 @media screen and (max-width: 380px) {
     .stackContainer{
