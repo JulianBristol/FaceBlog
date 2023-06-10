@@ -2,7 +2,7 @@ import { Button, Typography } from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react'
 import { useRecoilValue } from 'recoil';
 import { darkModeState } from '../../darkModeState';
-import makeStyles from "./styles";
+import makeStyles from "../../base_styles";
 
 const PostDescriptions = ({texts}) => {
   const darkMode = useRecoilValue(darkModeState);

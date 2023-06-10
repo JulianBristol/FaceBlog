@@ -24,7 +24,7 @@ import {
   import posts from "../../posts.json";
   import profiles from "../../profiles.json";
   import { useState } from "react";
-  import makeStyles from "./styles";
+  import makeStyles from "../../base_styles";
   import PostDescriptions from "./PostDescriptions";
 import DateParser from '../DateParser';
   

@@ -92,7 +92,6 @@ const Account = ({account, posts}) => {
 
   const schoolStatus = ['Attending', 'Graduated', 'Dropped out', 'Will be attending', ]
   const relationshipStatus = ['In a Relationship', 'Single', 'Married', 'It\'s complicated', 'FWB', 'Divorced' ]
-  const friendsList = ['test1', 'test2', 'test3', 'test4', 'test5']
 
   const mediaData = posts.map(post => ({
     id: post.id,
@@ -435,7 +434,7 @@ const Account = ({account, posts}) => {
     {/* Friend Tab START */}
     <TabPanel component='div' tabNum={tabNum} index={3} >
       <Box sx={{ marginTop: '15px', }}>
-        <Friends friendsList={friendsList} minWidth='200px'/>
+        <Friends overrideFriends={true} friends={account.friends} minWidth='200px'/>
       </Box>
     </TabPanel>
     {/* Friend Tab END */}
