@@ -91,60 +91,60 @@ import DateParser from '../DateParser';
                   <CardHeader
                   className={`${classes.postHeader} ${darkMode ? classes.darkMode_PostHeader : ''}`} 
                     avatar={
-                        <Tooltip title={profiles[post.type].name}>
+                        <Tooltip title={profiles[post?.type]?.name}>
                       <Avatar
-                        src={profiles[post.type].img}
-                        alt={profiles[post.type].alt}
+                        src={profiles[post?.type]?.img}
+                        alt={profiles[post?.type]?.alt}
                         aria-label="Profile Picture"
                         onClick={() => {
-                          window.open(profiles[post.type].faceblog, "_self");
+                          window.open(profiles[post?.type]?.faceblog, "_self");
                         }}
                       >
-                        {profiles[post.type].initials}
+                        {profiles[post?.type]?.initials}
                       </Avatar>
                       </Tooltip>
                     }
                     action={
                       <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="More Options" aria-label="settings" onClick={() => {
-                        handleAction(post.LiveLink, post.github);
+                        handleAction(post?.LiveLink, post?.github);
                       }}>
                         <MoreVertIcon />
                       </IconButton>
                     }
                     title={
                     <div>
-                      {post.title}
-                      {(!post.LiveLink && !post.github) ? '' : 
+                      {post?.title}
+                      {(!post?.LiveLink && !post?.github) ? '' : 
                       <span>
                         <br/>
-                    {post.LiveLink === '' ? '' : 
+                    {post?.LiveLink === '' ? '' : 
                       <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="View Website" aria-label="see Website" onClick={() => {
-                          window.open(post.LiveLink, '_blank');
+                          window.open(post?.LiveLink, '_blank');
                         }}
                         >
                           <WebIcon />
                       </IconButton>
                     }
-                    {post.github === '' ? '' : 
+                    {post?.github === '' ? '' : 
                       <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="View Github link" aria-label="see Github" 
                       onClick={() => {
-                        window.open(post.github, '_blank');
+                        window.open(post?.github, '_blank');
                       }}>
                           <GitHubIcon />
                       </IconButton>
                     }
                       </span>}
                     </div>}
-                    subheader={DateParser(post.date)}
+                    subheader={DateParser(post?.date)}
                   />
-                  {post.itemData ? <CardMedia>
-                    <QuiltedImageList itemData={post.itemData}/>
+                  {post?.itemData ? <CardMedia>
+                    <QuiltedImageList itemData={post?.itemData}/>
                   </CardMedia> : ''}
                   <CardContent style={{ padding: '20px 20px 0px' }}>
-                    <PostDescriptions texts={post.description} />
+                    <PostDescriptions texts={post?.description} />
                     <br/>
-                    {post.tech ? <Typography variant="body2">Tech Used: {post.tech}</Typography> : ''}
-                    {post.learned ? <Typography variant="body2">What I learned: {post.learned}</Typography> : ''}
+                    {post?.tech ? <Typography variant="body2">Tech Used: {post?.tech}</Typography> : ''}
+                    {post?.learned ? <Typography variant="body2">What I learned: {post?.learned}</Typography> : ''}
                   </CardContent>
                   <CardActions disableSpacing>
                     <Checkbox

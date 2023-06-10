@@ -14,7 +14,7 @@ const PostDescriptions = ({texts}) => {
   const lineHeight = 1.2;
   const textRef = useRef(null);
   const maxLines = 3;
-  const text = texts.join('\n\n');
+  const text = texts?.join('\n\n');
   
   useEffect(() => {
     const handleResize = () => {
