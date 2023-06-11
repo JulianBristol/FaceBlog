@@ -1,7 +1,42 @@
 [
   {
+    "user": "AkuaDuodu",
     "type": "blog",
-    "id": "darkmode profile",
+    "id": "Nature Walk",
+    "title": "Walking in the Beauty of Nature",
+    "date": "2023-06-11",
+    "description": [
+        "Hey everyone! Guess what I did today? 🌿 I went for the most amazing walk and couldn't resist capturing the beauty of nature with my camera! 📷✨",
+        "Let me tell you, folks, I am head over heels in love with nature! It's like a magical wonderland out there, filled with vibrant colors, soothing sounds, and breathtaking sights. 😍🌳🌺",
+        "There's something so special about being surrounded by the gentle rustling of leaves, the sweet scent of flowers in the air, and the warm embrace of sunshine on your skin. It's pure bliss! 💚✨",
+        "I can't even begin to describe how much joy and peace I find in these moments. Nature truly has a way of rejuvenating the soul and putting a big, goofy smile on my face! 😄🌈",
+        "So, my friends, if you ever need a little pick-me-up or a dose of inspiration, I highly recommend stepping outside and immersing yourself in the wonders of Mother Nature. Trust me, you'll be amazed at the magic that unfolds before your eyes! 🌼🌞✨",
+        "Sending you all loads of love and nature-filled happiness! Stay bubbly and embrace the beauty around you! 🌿💕✨"
+    ],
+    "itemData": [
+          {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686522786/FaceBlog%20App/Post%20Pics/20230527_1204565876_1_35_vunitw.jpg",
+              "title": "mini waterfall"
+            },
+          {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686522792/FaceBlog%20App/Post%20Pics/20230527_1143065877_1_35_uxv0vo.jpg",
+              "title": "Nature walk"
+            },
+          {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686523165/FaceBlog%20App/Post%20Pics/20230527_1143275880_35_ag89oz.jpg",
+              "title": "Can you find the fire hydrant"
+            },
+          {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686523162/FaceBlog%20App/Post%20Pics/20230527_1205175881_35_sgpkx8.jpg",
+              "title": "Its so green"
+            }
+    ],
+    "tags": ["TBD" ]
+  },
+  {
+    "user": "JulianRBristol",
+    "type": "blog",
+    "id": "SEO",
     "title": "Updates and decisions",
     "date": "2023-06-01",
     "description": [
@@ -12,6 +47,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "darkmode profile",
     "title": "Updates and decisions",
@@ -30,6 +66,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "Plans Finalized",
     "title": "I took a few days off working on the blog site",
@@ -44,6 +81,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "Bugs",
     "title": "I found a bug in the mobile version of this website",
@@ -54,6 +92,7 @@
     "tags": ["bugs, Faceblog" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "FaceBlog Scope Creep",
     "title": "This is taking quite some time...",
@@ -65,6 +104,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Portfolio",
       "title": "Creating my 3D Portfolio Page",
@@ -89,6 +129,7 @@
       "github": "https://github.com/JulianBristol/PortfolioPage"
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Searcy Water Utilities",
       "title": "Consulting with Searcy Water Utilities",
@@ -115,6 +156,7 @@
       "github": ""
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Travel Wisely",
       "title": "Travel Wisely",
@@ -146,6 +188,7 @@
       "github": "https://github.com/JulianBristol/TravelWisely"
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Blog",
       "title": "My First MUI Project",
