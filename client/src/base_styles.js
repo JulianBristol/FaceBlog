@@ -58,4 +58,35 @@ export default makeStyles((theme) => ({
     darkMode_SeeMore:{
         color: '#caff69 !important'
     },
+    friendCard: {
+        height: '100px',
+        width: 'calc(50% - 10px)',
+        display: 'grid',
+        position: 'relative',
+       /*  minWidth: '300px', */
+        '@media (max-width: 1250px)': {
+            '& .MuiAvatar-root': {
+                height: '50px',
+                width: '50px',
+            },
+            '& .MuiTypography-h5': {
+                fontSize: '0.85rem',
+            }
+        },
+        '@media (max-width: 975px)': {
+            width: '100%',
+            marginBottom: '10px',
+            '& .MuiAvatar-root': {
+                height: '75px',
+                width: '75px',
+            },
+            '& .MuiTypography-h5': {
+                fontSize: '1rem',
+            }
+        },
+        '@media (max-width: 475px)': {
+            marginLeft: '0px',
+            marginRight: '0px',
+        },
+    }
 }));

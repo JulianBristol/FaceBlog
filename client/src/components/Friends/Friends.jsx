@@ -15,10 +15,10 @@ const Friends = ({overrideFriends, friends}) => {
     overrideFriends ? setFriendsList(friends) : setFriendsList(defaultFriends);
   },[])
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gridGap: '20px' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gridGap: '20px', }}>
     {friendsList.map((friend, key) => {
       return (
-      <Card key={key} className={`${classes.card} ${darkMode ? classes.darkMode_Card : classes.lightMode_Card}`} sx={{ height: '100px', width: 'calc(50% - 10px)', display: 'grid', position: 'relative', }}>
+      <Card key={key} className={`${classes.card} ${classes.friendCard} ${darkMode ? classes.darkMode_Card : classes.lightMode_Card}`}>
         <CardHeader
         className={`${classes.postHeader} ${darkMode ? classes.darkMode_PostHeader : ''}`} 
           avatar={

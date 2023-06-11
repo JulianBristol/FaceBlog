@@ -49,7 +49,7 @@ body::-webkit-scrollbar-thumb{
 /* Responsiveness */
 @media screen and (max-width: 380px) {
     .stackContainer{
-        padding: 5px !important;
+        padding: 5px 0 !important;
         width: 100% !important;
     }
 }

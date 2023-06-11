@@ -79,9 +79,9 @@ function App() {
     <Box className={`root ${darkMode ? 'darkMode-bg' : 'lightMode-bg'}`}>
       <Router>
         <Navbar />
-        <Stack direction="row" spacing={{xs: 0, sm:2}} justifyContent="space-evenly">
+        <Stack direction="row" spacing={{xs: 0, sm:2}} justifyContent="space-evenly" >
           <Sidebar toggleDarkMode={darkMode} setToggleDarkMode={setDarkMode} handleDarkMode={handleDarkMode}/>
-          <Box flex={4} p={2} className='stackContainer' sx={{ paddingBottom: '50px' }}>
+          <Box flex={4} p={2} className='stackContainer' sx={{ paddingBottom: '50px', margin: '0 5px' }}>
             <Routes>
               <Route path="/" exact element={<Posts />} />
               <Route path="/Projects" exact element={<Projects />} />        

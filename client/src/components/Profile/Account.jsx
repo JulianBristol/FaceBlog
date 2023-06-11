@@ -142,7 +142,7 @@ const Account = ({account, posts}) => {
       </Box>
       </Box>
     </Box>
-    <Box sx={{ padding: '0px 20px 0px', display: 'flex'}}>
+    <Box sx={{ padding: '0px 20px 0px', display: 'flex', flexWrap: 'wrap'}}>
       <a className={`${classes.profileBaseText} ${classes.portfolioLinks}`} onClick={() => {
         setTabNum(3)
       }}>
@@ -191,16 +191,16 @@ const Account = ({account, posts}) => {
     aria-label="Profile Tab Selection"
     sx={{ /* background: '#dfdfdf', */marginTop: '15px', borderRadius: '0px 0px 5px 5px', }}
   >
-    <Tab /* className={classes.tabStyles} */ label="Posts" {...a11yProps(0)} />
-    <Tab /* className={classes.tabStyles} */ label="About" {...a11yProps(1)} />
-    <Tab /* className={classes.tabStyles} */ label="Media" {...a11yProps(2)} />
-    <Tab /* className={classes.tabStyles} */ label="Friends" {...a11yProps(3)} />
+    <Tab label="Posts" {...a11yProps(0)} />
+    <Tab label="About" {...a11yProps(1)} />
+    <Tab label="Media" {...a11yProps(2)} />
+    <Tab label="Friends" {...a11yProps(3)} />
   </Tabs>
     </Box>
     {/* Profile Container END */}
 
     {/* Posts Tab START */}
-  <TabPanel component='div' tabNum={tabNum} index={0} /* style={{ padding: '0px 10px 10px' }} */>
+  <TabPanel component='div' className={classes.tabStyle} tabNum={tabNum} index={0}>
     <Box sx={{ marginTop: '15px', }}>
     <Posts overridePosts={true} post={posts}/>
     </Box>
@@ -208,7 +208,7 @@ const Account = ({account, posts}) => {
     {/* Posts Tab END */}
 
     {/* About Tab START */}
-    <TabPanel component='div' tabNum={tabNum} index={1}>
+    <TabPanel className={classes.tabStyle} component='div' tabNum={tabNum} index={1}>
       <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}
       sx={{ flexGrow: 1, display: 'flex', }}
       >
@@ -394,7 +394,7 @@ const Account = ({account, posts}) => {
     {/* About Tab END */}
 
     {/* Media Tab START */}
-    <TabPanel component='div' tabNum={tabNum} index={2} >
+    <TabPanel className={classes.tabStyle} component='div' tabNum={tabNum} index={2} >
       <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}>
         <ImageList className={`${darkMode ? classes.darkMode_ScrollBar : '' }`} cols={3} /* rowHeight={164} */>
           {mediaData.map((imageObject, key) => (
@@ -432,7 +432,7 @@ const Account = ({account, posts}) => {
     {/* Media Tab END */}
 
     {/* Friend Tab START */}
-    <TabPanel component='div' tabNum={tabNum} index={3} >
+    <TabPanel className={classes.tabStyle} component='div' tabNum={tabNum} index={3} >
       <Box sx={{ marginTop: '15px', }}>
         <Friends overrideFriends={true} friends={account.friends} minWidth='200px'/>
       </Box>

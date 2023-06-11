@@ -155,7 +155,7 @@ export default makeStyles((theme) => ({
     },
     tabStyle: {
         marginTop: '15px',
-        background: '#DFDFDF',
+        padding: '0 5px',
         borderRadius: '5px',
         '& a': {
             color: '#004285',
@@ -204,10 +204,13 @@ export default makeStyles((theme) => ({
     },
     postModal: {
         width: '40vw',
-        margin: '10vh auto'
-    },
-    darkMode_PostModal: {
-
+        margin: '10vh auto',
+        '@media (max-width: 1200px)': {
+            width: '60vw',
+        },
+        '@media (max-width: 800px)': {
+            width: '80vw',
+        },
     },
 }
 ));
