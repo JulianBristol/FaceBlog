@@ -19,12 +19,9 @@ import './App.css'
 import { useEffect, useState } from 'react';
 import Posts from './components/Posts/Posts';
 import NotFound from './components/NotFound';
-import profiles from './profiles.json';
-import posts from './posts.json';
 
 function App() {
   const [account, setAccount] = useState({});
-  const [accountPoster, setAccountPoster] = useState('');
   const [darkMode, setDarkMode] = useRecoilState(darkModeState);
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -67,14 +64,6 @@ function App() {
     document.body.classList.toggle('dark-mode-body', darkMode);
   }, [darkMode]);
 
-  //Set initial account to user account
-  useState(() => {
-    setAccountPoster('portfolio')
-    setAccount(profiles.portfolio);
-  }, [])
-  
-  const accountPosts = posts.filter(obj => obj.type === accountPoster)
-
   return (
     <Box className={`root ${darkMode ? 'darkMode-bg' : 'lightMode-bg'}`}>
       <Router>
@@ -89,7 +78,8 @@ function App() {
               <Route path="/Pages" exact element={<Pages />} />
               <Route path="/Friends" exact element={<Friends />} />
               <Route path="/Settings" exact element={<Settings />} />
-              <Route path="/Account" exact element={<Account account={account} posts={accountPosts}/>} />
+              <Route path="/Account" exact element={<Account />} />
+              <Route path="/users/:id" element={<Account />} />
               <Route path="/*" exact element={<NotFound />} />
             </Routes>
           </Box>

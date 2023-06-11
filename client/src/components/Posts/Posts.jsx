@@ -91,16 +91,16 @@ import DateParser from '../DateParser';
                   <CardHeader
                   className={`${classes.postHeader} ${darkMode ? classes.darkMode_PostHeader : ''}`} 
                     avatar={
-                        <Tooltip title={profiles[post?.type]?.name}>
+                        <Tooltip title={profiles[post?.user]?.name}>
                       <Avatar
-                        src={profiles[post?.type]?.img}
-                        alt={profiles[post?.type]?.alt}
+                        src={profiles[post?.user]?.img}
+                        alt={profiles[post?.user]?.alt}
                         aria-label="Profile Picture"
                         onClick={() => {
-                          window.open(profiles[post?.type]?.faceblog, "_self");
+                          window.open(profiles[post?.user]?.faceblog, "_self");
                         }}
                       >
-                        {profiles[post?.type]?.initials}
+                        {profiles[post?.user]?.initials}
                       </Avatar>
                       </Tooltip>
                     }

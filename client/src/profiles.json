@@ -1,9 +1,9 @@
 {
-    "portfolio": {
+    "JulianBristol": {
         "name": "Julian Bristol",
         "initials": "JB",
         "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783391/FaceBlog%20App/PXL_20221002_135603827_2_nqm1ok.jpg",
-        "banner": "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686515419/FaceBlog%20App/trees-forest-woods-nature-fog-foggy_i3e3xx.jpg",
         "faceblog": "/Account",
         "jobTitle": "Front End Developer",
         "employer": "Lykka Village",
@@ -18,31 +18,437 @@
         "relationshipName": "Suzie",
         "relationshipLink": "http://localhost:3000/Pagels",
         "friends": [
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio",
-            "portfolio"
+            "JulianRBristol",
+            "JoeyBrown",
+            "AkuaDuodu",
+            "TamaraHickey"
+        ],
+        "website": "https://julianbristol.netlify.app/",
+        "websiteName": "Portfolio Page",
+        "github": "https://github.com/JulianBristol",
+        "linkedin": "https://www.linkedin.com/in/julianbristol/",
+        "email": "bristoljulian.r@gmail.com",
+        "emailLink": "bristoljulian.r+promotions@gmail.com",
+        "phone": "1 (475) 329 - 9736",
+        "dob": "1992-07-04",
+        "about": [
+            "You ever seen that part in a movie when the guy is soaked to the bone in the rain, confessing to the girl about how much he loves her? Yeah, that’s me and programming.",
+            "I started out with Java, OOP-ing it out (sick programmer slang), and cuz your boy don’t cheat, I didn’t want anything to do with front-end development.",
+            "However, I had to start my internship at a startup called Lykka Village. I’ve never had an internship before, but this was less like an internship and more like being thrown to the wolves. In a good way, I swear!",
+            "I see it as that movie troupe when they lock someone up in the dungeon with monsters and 3 weeks later, they open it up to find the monsters completely tamed.",
+            "They told us what the stakeholders wanted and we were left to figure it out. All of a sudden, all my courses in JavaScript, HTML5, CSS3 became relevant. The problem was, they wanted us to use React.js and Material-UI. Cue the lightning and thunder.",
+            "Cause I didn’t really know what I was doing, I did one little React.js MERN stack tutorial and a quick MUI tutorial and I was hooked on component-based architecture. From the get go, we were learning about RESTful APIs, UI/UX design, responsive web design, and version control/Git. I then had the realization that this was the backbone of every project that I have ever seen. At some point, my classmates started coming to me for help and I was guiding their projects.",
+            "By the time the internship at Lykka ended, I had the cofounder, Jean-Michel Pollak, saying “His attention to detail, rigour and obvious desire to do what is best for the project always shines”. That’s seriously in his letter of reference.",
+            "I enjoyed my time there so much that they extended my internship to a temporary full-time position. During that time, I further learned about performance optimization, debugging, and web accessibility.",
+            "Unfortunately, all things must come to an end; Lykka and I had to part ways. Since then, I’ve been working with Searcy Water Utilities to revamp their website and add other backend functionality. I learned a little about SEO best practices during that time and what it is like being the main/only web designer and front-end developer on a project. Its kind of lonely :/",
+            "So back to the movie – it’s raining. \"I am just a front-end developer, standing in front of a recruiter/person reading my LinkedIn summary, asking them to love this metaphorical puppy in the rain-soaked cardboard box\".",
+            "Will you check out his:",
+            "Portfolio page: https://julianbristol.netlify.app/",
+            "GitHub: https://github.com/JulianBristol",
+            "And take him out of the cold?"
+        ]
+    },
+    "JoeyBrown": {
+        "name": "Joey Brown",
+        "initials": "JB",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686520503/FaceBlog%20App/Users/Couples/Tamara%20Hickey%20and%20Joey%20Brown/Joey%20Brown.jpg",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686515419/FaceBlog%20App/trees-forest-woods-nature-fog-foggy_i3e3xx.jpg",
+        "faceblog": "/users/JoeyBrown",
+        "jobTitle": "HR Specialist",
+        "employer": "Holographic Studios",
+        "employerLink": "https://holographer.com/",
+        "schoolStatus": 1,
+        "school": "Lehman College",
+        "schoolLink": "https://www.lehman.cuny.edu/",
+        "graduationYear": "2014",
+        "home": "NYC, New York",
+        "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
+        "relationship": 0,
+        "relationshipName": "Tamara Hickey",
+        "relationshipLink": "/users/TamaraHickey",
+        "friends": [
+            "JulianBristol",
+            "JulianRBristol",
+            "AkuaDuodu",
+            "TamaraHickey"
+        ],
+        "email": "bristoljulian.r@gmail.com",
+        "emailLink": "bristoljulian.r+promotions@gmail.com",
+        "phone": "1 (475) 329 - 9736",
+        "dob": "1998-02-23",
+        "about": [
+            "You ever seen that part in a movie when the guy is soaked to the bone in the rain, confessing to the girl about how much he loves her? Yeah, that’s me and programming.",
+            "I started out with Java, OOP-ing it out (sick programmer slang), and cuz your boy don’t cheat, I didn’t want anything to do with front-end development.",
+            "However, I had to start my internship at a startup called Lykka Village. I’ve never had an internship before, but this was less like an internship and more like being thrown to the wolves. In a good way, I swear!",
+            "I see it as that movie troupe when they lock someone up in the dungeon with monsters and 3 weeks later, they open it up to find the monsters completely tamed.",
+            "They told us what the stakeholders wanted and we were left to figure it out. All of a sudden, all my courses in JavaScript, HTML5, CSS3 became relevant. The problem was, they wanted us to use React.js and Material-UI. Cue the lightning and thunder.",
+            "Cause I didn’t really know what I was doing, I did one little React.js MERN stack tutorial and a quick MUI tutorial and I was hooked on component-based architecture. From the get go, we were learning about RESTful APIs, UI/UX design, responsive web design, and version control/Git. I then had the realization that this was the backbone of every project that I have ever seen. At some point, my classmates started coming to me for help and I was guiding their projects.",
+            "By the time the internship at Lykka ended, I had the cofounder, Jean-Michel Pollak, saying “His attention to detail, rigour and obvious desire to do what is best for the project always shines”. That’s seriously in his letter of reference.",
+            "I enjoyed my time there so much that they extended my internship to a temporary full-time position. During that time, I further learned about performance optimization, debugging, and web accessibility.",
+            "Unfortunately, all things must come to an end; Lykka and I had to part ways. Since then, I’ve been working with Searcy Water Utilities to revamp their website and add other backend functionality. I learned a little about SEO best practices during that time and what it is like being the main/only web designer and front-end developer on a project. Its kind of lonely :/",
+            "So back to the movie – it’s raining. \"I am just a front-end developer, standing in front of a recruiter/person reading my LinkedIn summary, asking them to love this metaphorical puppy in the rain-soaked cardboard box\".",
+            "Will you check out his:",
+            "Portfolio page: https://julianbristol.netlify.app/",
+            "GitHub: https://github.com/JulianBristol",
+            "And take him out of the cold?"
+        ]
+    },
+    "TamaraHickey": {
+        "name": "Tamara Hickey",
+        "initials": "TH",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686520501/FaceBlog%20App/Users/Couples/Tamara%20Hickey%20and%20Joey%20Brown/Tamara%20Hickey.jpg",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686515419/FaceBlog%20App/trees-forest-woods-nature-fog-foggy_i3e3xx.jpg",
+        "faceblog": "/users/TamaraHickey",
+        "jobTitle": "HR Specialist Assistant",
+        "employer": "Holographic Studios",
+        "employerLink": "https://holographer.com/",
+        "schoolStatus": 1,
+        "school": "Fordham University",
+        "schoolLink": "https://www.fordham.edu/",
+        "graduationYear": "2018",
+        "home": "NYC, New York",
+        "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
+        "relationship": 0,
+        "relationshipName": "Joey Brown",
+        "relationshipLink": "/users/JoeyBrown",
+        "friends": [
+            "JulianBristol",
+            "JulianRBristol",
+            "AkuaDuodu",
+            "JoeyBrown"
+        ],
+        "email": "bristoljulian.r@gmail.com",
+        "emailLink": "bristoljulian.r+promotions@gmail.com",
+        "phone": "1 (475) 329 - 9736",
+        "dob": "1998-02-23",
+        "about": [
+            "You ever seen that part in a movie when the guy is soaked to the bone in the rain, confessing to the girl about how much he loves her? Yeah, that’s me and programming.",
+            "I started out with Java, OOP-ing it out (sick programmer slang), and cuz your boy don’t cheat, I didn’t want anything to do with front-end development.",
+            "However, I had to start my internship at a startup called Lykka Village. I’ve never had an internship before, but this was less like an internship and more like being thrown to the wolves. In a good way, I swear!",
+            "I see it as that movie troupe when they lock someone up in the dungeon with monsters and 3 weeks later, they open it up to find the monsters completely tamed.",
+            "They told us what the stakeholders wanted and we were left to figure it out. All of a sudden, all my courses in JavaScript, HTML5, CSS3 became relevant. The problem was, they wanted us to use React.js and Material-UI. Cue the lightning and thunder.",
+            "Cause I didn’t really know what I was doing, I did one little React.js MERN stack tutorial and a quick MUI tutorial and I was hooked on component-based architecture. From the get go, we were learning about RESTful APIs, UI/UX design, responsive web design, and version control/Git. I then had the realization that this was the backbone of every project that I have ever seen. At some point, my classmates started coming to me for help and I was guiding their projects.",
+            "By the time the internship at Lykka ended, I had the cofounder, Jean-Michel Pollak, saying “His attention to detail, rigour and obvious desire to do what is best for the project always shines”. That’s seriously in his letter of reference.",
+            "I enjoyed my time there so much that they extended my internship to a temporary full-time position. During that time, I further learned about performance optimization, debugging, and web accessibility.",
+            "Unfortunately, all things must come to an end; Lykka and I had to part ways. Since then, I’ve been working with Searcy Water Utilities to revamp their website and add other backend functionality. I learned a little about SEO best practices during that time and what it is like being the main/only web designer and front-end developer on a project. Its kind of lonely :/",
+            "So back to the movie – it’s raining. \"I am just a front-end developer, standing in front of a recruiter/person reading my LinkedIn summary, asking them to love this metaphorical puppy in the rain-soaked cardboard box\".",
+            "Will you check out his:",
+            "Portfolio page: https://julianbristol.netlify.app/",
+            "GitHub: https://github.com/JulianBristol",
+            "And take him out of the cold?"
+        ]
+    },
+    "AkuaDuodu": {
+        "name": "Akua Duodu",
+        "initials": "AD",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686521519/FaceBlog%20App/Users/20230225_2007505871_10_cftj5m.jpg",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686521558/FaceBlog%20App/Banners/Kenshin_Himura_5872_otb9bt.jpg",
+        "faceblog": "/users/AkuaDuodu",
+        "schoolStatus": 1,
+        "school": "Lehman College",
+        "schoolLink": "https://www.lehman.cuny.edu/",
+        "graduationYear": "2019",
+        "home": "NYC, New York",
+        "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
+        "relationship": 1,
+        "friends": [
+            "JulianBristol",
+            "JulianRBristol",
+            "JoeyBrown",
+            "TamaraHickey"
+        ],
+        "linkedin": "https://www.linkedin.com/in/akuaduodu/",
+        "email": "akuadduodu@gmail.com",
+        "emailLink": "akuadduodu+face-blog@gmail.com",
+        "phone": "1 (475) 329 - 9736",
+        "dob": "1994-03-02",
+        "about": [
+            "I love anime, um exclamation point. Ummm, my favourite anime is Rouni Kenshin. I like spending my time hanging with friends, and I love my alone time."
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "JulianffBristol": {
+        "name": "Julian Bristol",
+        "initials": "JB",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783391/FaceBlog%20App/PXL_20221002_135603827_2_nqm1ok.jpg",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686515419/FaceBlog%20App/trees-forest-woods-nature-fog-foggy_i3e3xx.jpg",
+        "faceblog": "/Account",
+        "jobTitle": "Front End Developer",
+        "employer": "Lykka Village",
+        "employerLink": "https://lykka.org/",
+        "schoolStatus": 1,
+        "school": "Capella University",
+        "schoolLink": "https://capella.edu/",
+        "graduationYear": "2022",
+        "home": "NYC, New York",
+        "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
+        "relationship": 1,
+        "relationshipName": "Suzie",
+        "relationshipLink": "http://localhost:3000/Pagels",
+        "friends": [
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol"
+        ],
+        "website": "https://julianbristol.netlify.app/",
+        "websiteName": "Portfolio Page",
+        "github": "https://github.com/JulianBristol",
+        "linkedin": "https://www.linkedin.com/in/julianbristol/",
+        "email": "bristoljulian.r@gmail.com",
+        "emailLink": "bristoljulian.r+promotions@gmail.com",
+        "phone": "1 (475) 329 - 9736",
+        "dob": "1992-07-04",
+        "about": [
+            "You ever seen that part in a movie when the guy is soaked to the bone in the rain, confessing to the girl about how much he loves her? Yeah, that’s me and programming.",
+            "I started out with Java, OOP-ing it out (sick programmer slang), and cuz your boy don’t cheat, I didn’t want anything to do with front-end development.",
+            "However, I had to start my internship at a startup called Lykka Village. I’ve never had an internship before, but this was less like an internship and more like being thrown to the wolves. In a good way, I swear!",
+            "I see it as that movie troupe when they lock someone up in the dungeon with monsters and 3 weeks later, they open it up to find the monsters completely tamed.",
+            "They told us what the stakeholders wanted and we were left to figure it out. All of a sudden, all my courses in JavaScript, HTML5, CSS3 became relevant. The problem was, they wanted us to use React.js and Material-UI. Cue the lightning and thunder.",
+            "Cause I didn’t really know what I was doing, I did one little React.js MERN stack tutorial and a quick MUI tutorial and I was hooked on component-based architecture. From the get go, we were learning about RESTful APIs, UI/UX design, responsive web design, and version control/Git. I then had the realization that this was the backbone of every project that I have ever seen. At some point, my classmates started coming to me for help and I was guiding their projects.",
+            "By the time the internship at Lykka ended, I had the cofounder, Jean-Michel Pollak, saying “His attention to detail, rigour and obvious desire to do what is best for the project always shines”. That’s seriously in his letter of reference.",
+            "I enjoyed my time there so much that they extended my internship to a temporary full-time position. During that time, I further learned about performance optimization, debugging, and web accessibility.",
+            "Unfortunately, all things must come to an end; Lykka and I had to part ways. Since then, I’ve been working with Searcy Water Utilities to revamp their website and add other backend functionality. I learned a little about SEO best practices during that time and what it is like being the main/only web designer and front-end developer on a project. Its kind of lonely :/",
+            "So back to the movie – it’s raining. \"I am just a front-end developer, standing in front of a recruiter/person reading my LinkedIn summary, asking them to love this metaphorical puppy in the rain-soaked cardboard box\".",
+            "Will you check out his:",
+            "Portfolio page: https://julianbristol.netlify.app/",
+            "GitHub: https://github.com/JulianBristol",
+            "And take him out of the cold?"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "JuliasnBristol": {
+        "name": "Julian Bristol",
+        "initials": "JB",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783391/FaceBlog%20App/PXL_20221002_135603827_2_nqm1ok.jpg",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686515419/FaceBlog%20App/trees-forest-woods-nature-fog-foggy_i3e3xx.jpg",
+        "faceblog": "/Account",
+        "jobTitle": "Front End Developer",
+        "employer": "Lykka Village",
+        "employerLink": "https://lykka.org/",
+        "schoolStatus": 1,
+        "school": "Capella University",
+        "schoolLink": "https://capella.edu/",
+        "graduationYear": "2022",
+        "home": "NYC, New York",
+        "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
+        "relationship": 1,
+        "relationshipName": "Suzie",
+        "relationshipLink": "http://localhost:3000/Pagels",
+        "friends": [
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianBristol",
+            "JulianRBristol"
+        ],
+        "website": "https://julianbristol.netlify.app/",
+        "websiteName": "Portfolio Page",
+        "github": "https://github.com/JulianBristol",
+        "linkedin": "https://www.linkedin.com/in/julianbristol/",
+        "email": "bristoljulian.r@gmail.com",
+        "emailLink": "bristoljulian.r+promotions@gmail.com",
+        "phone": "1 (475) 329 - 9736",
+        "dob": "1992-07-04",
+        "about": [
+            "You ever seen that part in a movie when the guy is soaked to the bone in the rain, confessing to the girl about how much he loves her? Yeah, that’s me and programming.",
+            "I started out with Java, OOP-ing it out (sick programmer slang), and cuz your boy don’t cheat, I didn’t want anything to do with front-end development.",
+            "However, I had to start my internship at a startup called Lykka Village. I’ve never had an internship before, but this was less like an internship and more like being thrown to the wolves. In a good way, I swear!",
+            "I see it as that movie troupe when they lock someone up in the dungeon with monsters and 3 weeks later, they open it up to find the monsters completely tamed.",
+            "They told us what the stakeholders wanted and we were left to figure it out. All of a sudden, all my courses in JavaScript, HTML5, CSS3 became relevant. The problem was, they wanted us to use React.js and Material-UI. Cue the lightning and thunder.",
+            "Cause I didn’t really know what I was doing, I did one little React.js MERN stack tutorial and a quick MUI tutorial and I was hooked on component-based architecture. From the get go, we were learning about RESTful APIs, UI/UX design, responsive web design, and version control/Git. I then had the realization that this was the backbone of every project that I have ever seen. At some point, my classmates started coming to me for help and I was guiding their projects.",
+            "By the time the internship at Lykka ended, I had the cofounder, Jean-Michel Pollak, saying “His attention to detail, rigour and obvious desire to do what is best for the project always shines”. That’s seriously in his letter of reference.",
+            "I enjoyed my time there so much that they extended my internship to a temporary full-time position. During that time, I further learned about performance optimization, debugging, and web accessibility.",
+            "Unfortunately, all things must come to an end; Lykka and I had to part ways. Since then, I’ve been working with Searcy Water Utilities to revamp their website and add other backend functionality. I learned a little about SEO best practices during that time and what it is like being the main/only web designer and front-end developer on a project. Its kind of lonely :/",
+            "So back to the movie – it’s raining. \"I am just a front-end developer, standing in front of a recruiter/person reading my LinkedIn summary, asking them to love this metaphorical puppy in the rain-soaked cardboard box\".",
+            "Will you check out his:",
+            "Portfolio page: https://julianbristol.netlify.app/",
+            "GitHub: https://github.com/JulianBristol",
+            "And take him out of the cold?"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "JulianRBristol": {
+        "name": "Julian R. Bristol",
+        "initials": "JB",
+        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783381/FaceBlog%20App/Professional_Profile_Picture_wl83ka.jpg",
+        "banner": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686515483/FaceBlog%20App/people-man-alone-rest_pklhsu.jpg",
+        "faceblog": "/users/JulianRBristol",
+        "jobTitle": "Front End Developer Consultant",
+        "employer": "Searcy Water Utilities",
+        "employerLink": "http://searcywater.org/",
+        "schoolStatus": 1,
+        "school": "Capella University",
+        "schoolLink": "https://capella.edu/",
+        "graduationYear": "2022",
+        "home": "NYC, New York",
+        "homeLink": "https://goo.gl/maps/vEPLL8zREfDD56998",
+        "relationship": 1,
+        "relationshipName": "Suzie",
+        "relationshipLink": "http://localhost:3000/Pagels",
+        "friends": [
+            "JulianBristol",
+            "JoeyBrown",
+            "AkuaDuodu",
+            "TamaraHickey"
         ],
         "website": "https://julianbristol.netlify.app/",
         "websiteName": "Portfolio Page",
@@ -60,12 +466,5 @@
             "To stay up-to-date with the latest advancements and trends in the technology industry, I actively engage in reading news articles, such as Tech Brew, to stay informed. Additionally, I enjoy following tutorials on YouTube to build new projects, which not only keeps me updated but also allows me to practice and enhance my skills.",
             "In the software development field, I am motivated by the challenges and problems that need to be solved. Building websites and programming them is not only a professional pursuit but also an entertaining and leisurely activity for me. When faced with difficult problems, I approach them with an educated guess as a first step. If that doesn't work, I use console logs to debug and analyze the issue. If further assistance is needed, I turn to the internet for similar problems and also rely on my network of friends and coworkers for support and guidance."
         ]
-    },
-    "blog": {
-        "name": "Julian R. Bristol",
-        "initials": "JB",
-        "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684783381/FaceBlog%20App/Professional_Profile_Picture_wl83ka.jpg",
-        "alt": "Julian Bristol's profile picture",
-        "faceblog": "/users/JulianBristol"
     }
 }

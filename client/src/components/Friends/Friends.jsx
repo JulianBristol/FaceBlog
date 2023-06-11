@@ -10,7 +10,7 @@ const Friends = ({overrideFriends, friends}) => {
   const darkMode = useRecoilValue(darkModeState);
   const classes = makeStyles();
   const [friendsList, setFriendsList] = useState([]);
-  const defaultFriends = profiles.portfolio.friends;
+  const defaultFriends = profiles.JulianBristol.friends;
   useEffect(() => {
     overrideFriends ? setFriendsList(friends) : setFriendsList(defaultFriends);
   },[])

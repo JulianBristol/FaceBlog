@@ -1,7 +1,8 @@
 [
   {
+    "user": "JulianRBristol",
     "type": "blog",
-    "id": "darkmode profile",
+    "id": "SEO",
     "title": "Updates and decisions",
     "date": "2023-06-01",
     "description": [
@@ -12,6 +13,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "darkmode profile",
     "title": "Updates and decisions",
@@ -30,6 +32,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "Plans Finalized",
     "title": "I took a few days off working on the blog site",
@@ -44,6 +47,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "Bugs",
     "title": "I found a bug in the mobile version of this website",
@@ -54,6 +58,7 @@
     "tags": ["bugs, Faceblog" ]
   },
   {
+    "user": "JulianRBristol",
     "type": "blog",
     "id": "FaceBlog Scope Creep",
     "title": "This is taking quite some time...",
@@ -65,6 +70,7 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Portfolio",
       "title": "Creating my 3D Portfolio Page",
@@ -89,6 +95,7 @@
       "github": "https://github.com/JulianBristol/PortfolioPage"
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Searcy Water Utilities",
       "title": "Consulting with Searcy Water Utilities",
@@ -115,6 +122,7 @@
       "github": ""
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Travel Wisely",
       "title": "Travel Wisely",
@@ -146,6 +154,7 @@
       "github": "https://github.com/JulianBristol/TravelWisely"
   },
   {
+    "user": "JulianBristol",
       "type": "portfolio",
       "id": "Blog",
       "title": "My First MUI Project",
