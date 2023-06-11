@@ -102,7 +102,6 @@ const Account = () => {
     if (id !== undefined) {
       setUserAccount(profiles[id]);
       setUserPosts(posts.filter(post => post.user === id));
-      console.log(userPosts)
     } else{
       setUserAccount(profiles.JulianBristol);
       setUserPosts(posts.filter(post => post.user === "JulianBristol"));
