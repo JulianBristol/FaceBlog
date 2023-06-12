@@ -238,7 +238,7 @@ const Account = () => {
     {/* Posts Tab END */}
 
     {/* About Tab START */}
-    <TabPanel className={classes.tabStyle} component='div' tabNum={tabNum} index={1}>
+    <TabPanel style={{ padding: '0 5px', }} component='div' tabNum={tabNum} index={1}>
       <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}
       sx={{ flexGrow: 1, display: 'flex', }}
       >
