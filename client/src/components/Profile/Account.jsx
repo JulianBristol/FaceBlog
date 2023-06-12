@@ -135,7 +135,6 @@ const Account = () => {
   };
   const handleOpenPostModal = (postID) => {
     setOpen(true)
-    console.log(`I clicked on ${postID}`)
     setSinglePost(userPosts.filter(post => post.id === postID));
   };
   const handleClosePostModal = (postID) => {
@@ -231,7 +230,7 @@ const Account = () => {
     {/* Profile Container END */}
 
     {/* Posts Tab START */}
-  <TabPanel component='div' className={classes.tabStyle} tabNum={tabNum} index={0}>
+  <TabPanel component='div' style={{ padding: '0 5px', }} tabNum={tabNum} index={0}>
     <Box sx={{ marginTop: '15px', }}>
     <Posts overridePosts={true} post={userPosts}/>
     </Box>
@@ -425,7 +424,7 @@ const Account = () => {
     {/* About Tab END */}
 
     {/* Media Tab START */}
-    <TabPanel className={classes.tabStyle} component='div' tabNum={tabNum} index={2} >
+    <TabPanel style={{ padding: '0 5px', }} component='div' tabNum={tabNum} index={2} >
       <Box className={`${darkMode ? classes.darkMode_TabStyle: ''} ${classes.tabStyle} `}>
         <ImageList className={`${darkMode ? classes.darkMode_ScrollBar : '' }`} cols={3} /* rowHeight={164} */>
           {mediaData?.map((imageObject, key) => (
@@ -455,7 +454,7 @@ const Account = () => {
     aria-describedby="modal-modal-description"
     sx={{ overflow: "auto" }}
     >
-      <Box className={`${darkMode ? classes.darkMode_PostModal: ''} ${classes.postModal} `}>
+      <Box className={classes.postModal}>
         <Posts overridePosts={true} post={singlePost}/>
       </Box>
     </Modal>
@@ -463,7 +462,7 @@ const Account = () => {
     {/* Media Tab END */}
 
     {/* Friend Tab START */}
-    <TabPanel className={classes.tabStyle} component='div' tabNum={tabNum} index={3} >
+    <TabPanel style={{ padding: '0 5px', }} component='div' tabNum={tabNum} index={3} >
       <Box sx={{ marginTop: '15px', }}>
         <Friends overrideFriends={true} friends={userAccount.friends} minWidth='200px'/>
       </Box>

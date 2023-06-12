@@ -34,10 +34,28 @@
     "tags": ["TBD" ]
   },
   {
+    "user": "JoeyBrown",
+    "type": "randomPosts",
+    "id": "NYC Smoke 2023",
+    "title": "This smoke is getting crazy",
+    "date": "2023-06-07",
+    "description": [
+        "This smoke is getting out of hand! I live in NYC and its crazy!",
+        "Can you believe that there are people outside riding bikes and going about their day as if there isn't visible smoke in the air?! I don't understand people sometimes. I know Covid was hard but come on. You can literally see the problem. Put a mask on or something!"
+    ],
+    "itemData": [
+          {
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1686557610/FaceBlog%20App/Post%20Pics/FyC5sNpXwAEjoiH_50_iuoxfu.jpg",
+              "title": "NYC smoke 2023"
+            }
+    ],
+    "tags": ["TBD" ]
+  },
+  {
     "user": "JulianRBristol",
     "type": "blog",
     "id": "SEO",
-    "title": "Updates and decisions",
+    "title": "SEO Optimization",
     "date": "2023-06-01",
     "description": [
         "Since my last post, I have reworked my resume and taken a course in SEO practices. After listening to the recommendations, I have actually seen some results and they are remarkable!",
@@ -59,7 +77,7 @@
     ],
     "itemData": [
           {
-              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1685415658/FaceBlog%20App/Faceblog_Dark_mode_luswzi.png",
+              "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1685415658/FaceBlog%20App/Post%20Pics/Faceblog_Dark_mode_luswzi.png",
               "title": "profile teaser X dark mode"
             }
     ],
@@ -111,7 +129,7 @@
       "date": "2023-05-06",
       "itemData": [
             {
-                "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/Portfolio_Screenshot_00001_v5hdki.png",
+                "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/Post%20Pics/Portfolio_Screenshot_00001_v5hdki.png",
                 "title": "Portfolio Page"
               }
       ],
@@ -136,7 +154,7 @@
       "date": "2023-04-25",
       "itemData": [
           {
-          "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/SearcyWaterUtilities_bxcxsh.png",
+          "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356136/FaceBlog%20App/Post%20Pics/SearcyWaterUtilities_bxcxsh.png",
           "title": "Searcy Water Utilities preview"
         }
       ],
@@ -163,15 +181,15 @@
       "date": "2022-10-20",
       "itemData": [
           {
-            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356125/FaceBlog%20App/TravelWisely_hhffwn.png",
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356125/FaceBlog%20App/Post%20Pics/TravelWisely_hhffwn.png",
             "title": "Travel Wisely website"
           },
           {
-            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684434479/FaceBlog%20App/Rain_eofdg7.png",
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684434479/FaceBlog%20App/Post%20Pics/Rain_eofdg7.png",
             "title": "rain icon"
           },
           {
-            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684434404/FaceBlog%20App/Partly_Cloudy_wtpfyh.png",
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684434404/FaceBlog%20App/Post%20Pics/Partly_Cloudy_wtpfyh.png",
             "title": "partly cloudy icon"
           }
       ],
@@ -195,11 +213,11 @@
       "date": "2022-08-08",
       "itemData": [
           {
-            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356244/FaceBlog%20App/JuDev2.png",
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684356244/FaceBlog%20App/Post%20Pics/JuDev2.png",
             "title": "FaceBlog React Project"
           },
           {
-            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684427835/FaceBlog%20App/Screenshot_2023-05-18_123640_jfdjpe.png",
+            "img": "https://res.cloudinary.com/dfb1oxmpx/image/upload/v1684427835/FaceBlog%20App/Post%20Pics/Screenshot_2023-05-18_123640_jfdjpe.png",
             "title": "FaceBlog website"
           }
       ],

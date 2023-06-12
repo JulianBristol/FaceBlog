@@ -2,6 +2,7 @@ import { useRecoilValue } from 'recoil';
 import { darkModeState } from '../../darkModeState';
 import {
     Avatar,
+    Box,
     Card,
     CardActions,
     CardContent,
@@ -11,10 +12,11 @@ import {
     IconButton,
     ImageList,
     ImageListItem,
+    Modal,
     Tooltip,
     Typography,
   } from "@mui/material";
-  import React from "react";
+  import React, { useEffect } from "react";
   import MoreVertIcon from "@mui/icons-material/MoreVert";
   import FavoriteIcon from "@mui/icons-material/Favorite";
   import ShareIcon from "@mui/icons-material/Share";
@@ -30,15 +32,16 @@ import DateParser from '../DateParser';
   
   const Posts = ({overridePosts, post}) => {
   const darkMode = useRecoilValue(darkModeState);
-    if (overridePosts){
-      posts = post
-    }
+  const [currentPosts, setCurrentPosts] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState('');
+  const [modalImageAlt, setModalImageAlt] = useState('');
     const classes = makeStyles();
     //Check if icon is checked
     const [checked, setChecked] = useState(false);
-    const handleAction = ((liveLink, github) => {
-        console.log("handleClick");
-        console.log(liveLink, github);
+
+    const handleAction = (() => {
+        console.log("handle Open options");
     })
     
     const addRemoveFavorites = checked
@@ -51,6 +54,26 @@ import DateParser from '../DateParser';
       [{row: 2, col: 2}, {row: 2, col: 1}, {row: 2, col: 1}],
       [{row: 2, col: 2}, {row: 1, col: 1}, {row: 1, col: 1}, {row: 1, col: 2}],
     ];
+
+    useEffect(() => {
+      if (overridePosts){
+        setCurrentPosts(post);
+      }else{
+        setCurrentPosts(posts);
+      }
+    })
+
+    //Zoom in on Image
+    const handleOpenZoomedImageModal = (e) => {
+      setModalImageSrc(e.target.src)
+      setModalImageAlt(e.target.alt)
+      setOpen(true);
+    }
+    const handleCloseZoomedImageModal = () => {
+      setOpen(false);
+    }
+
+
 
     function srcset(image, size, rows = 1, cols = 1) {
       return {
@@ -75,6 +98,10 @@ import DateParser from '../DateParser';
                   {...srcset(item.img, 121, imgArrPositioning[variant][key].row, imgArrPositioning[variant][key].col)}
                  alt={item.title}
                   loading="lazy"
+                  style={{ cursor: 'pointer' }}
+                  onClick={(e) => {
+                    handleOpenZoomedImageModal(e);
+                  }}
                 />
               </ImageListItem>
             )
@@ -85,7 +112,7 @@ import DateParser from '../DateParser';
 
     return(
         <>
-        {posts.map((post, key) => {
+        {currentPosts.map((post, key) => {
             return (
                 <Card className={`${classes.card} ${darkMode ? classes.darkMode_Card : classes.lightMode_Card}`} key={key}>
                   <CardHeader
@@ -106,14 +133,16 @@ import DateParser from '../DateParser';
                     }
                     action={
                       <IconButton className={`${classes.icons} ${darkMode ? classes.darkMode_Icon : ''}`} title="More Options" aria-label="settings" onClick={() => {
-                        handleAction(post?.LiveLink, post?.github);
+                        handleAction();
                       }}>
                         <MoreVertIcon />
                       </IconButton>
                     }
                     title={
                     <div>
-                      {post?.title}
+                      <Typography variant='h5'>{profiles[post?.user]?.name}</Typography>
+                    <div>
+                      <Typography variant='h6'>{post?.title}</Typography>
                       {(!post?.LiveLink && !post?.github) ? '' : 
                       <span>
                         <br/>
@@ -134,12 +163,15 @@ import DateParser from '../DateParser';
                       </IconButton>
                     }
                       </span>}
-                    </div>}
+                    </div>
+                    </div>
+                    }
                     subheader={DateParser(post?.date)}
                   />
                   {post?.itemData ? <CardMedia>
                     <QuiltedImageList itemData={post?.itemData}/>
                   </CardMedia> : ''}
+
                   <CardContent style={{ padding: '20px 20px 0px' }}>
                     <PostDescriptions texts={post?.description} />
                     <br/>
@@ -162,6 +194,24 @@ import DateParser from '../DateParser';
                 </Card>
               );
         })}
+
+        {/* Zoomed Image Modal START */}
+        <Modal
+        open={open}
+        onClose={handleCloseZoomedImageModal}
+        aria-labelledby="picture-modal"
+        aria-describedby="picture-modal-description"
+        sx={{ overflow: "auto", }}
+        >
+          <div className={classes.imgModal} >
+            <img
+            className={classes.imgModal_img}
+            src={modalImageSrc}
+            alt={modalImageAlt}
+            />
+          </div>
+        </Modal>
+        {/* Zoomed Image Modal END */}
         </>
     )
   };
