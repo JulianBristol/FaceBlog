@@ -14,7 +14,7 @@ import {
     Tooltip,
     Typography,
   } from "@mui/material";
-  import React from "react";
+  import React, { useEffect } from "react";
   import MoreVertIcon from "@mui/icons-material/MoreVert";
   import FavoriteIcon from "@mui/icons-material/Favorite";
   import ShareIcon from "@mui/icons-material/Share";
@@ -30,9 +30,7 @@ import DateParser from '../DateParser';
   
   const Posts = ({overridePosts, post}) => {
   const darkMode = useRecoilValue(darkModeState);
-    if (overridePosts){
-      posts = post
-    }
+  const [currentPosts, setCurrentPosts] = useState([]);
     const classes = makeStyles();
     //Check if icon is checked
     const [checked, setChecked] = useState(false);
@@ -51,6 +49,14 @@ import DateParser from '../DateParser';
       [{row: 2, col: 2}, {row: 2, col: 1}, {row: 2, col: 1}],
       [{row: 2, col: 2}, {row: 1, col: 1}, {row: 1, col: 1}, {row: 1, col: 2}],
     ];
+
+    useEffect(() => {
+      if (overridePosts){
+        setCurrentPosts(post);
+      }else{
+        setCurrentPosts(posts);
+      }
+    })
 
     function srcset(image, size, rows = 1, cols = 1) {
       return {
@@ -85,7 +91,7 @@ import DateParser from '../DateParser';
 
     return(
         <>
-        {posts.map((post, key) => {
+        {currentPosts.map((post, key) => {
             return (
                 <Card className={`${classes.card} ${darkMode ? classes.darkMode_Card : classes.lightMode_Card}`} key={key}>
                   <CardHeader
