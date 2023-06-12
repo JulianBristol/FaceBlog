@@ -140,7 +140,9 @@ import DateParser from '../DateParser';
                     }
                     title={
                     <div>
-                      {post?.title}
+                      <Typography variant='h5'>{profiles[post?.user]?.name}</Typography>
+                    <div>
+                      <Typography variant='h6'>{post?.title}</Typography>
                       {(!post?.LiveLink && !post?.github) ? '' : 
                       <span>
                         <br/>
@@ -161,7 +163,9 @@ import DateParser from '../DateParser';
                       </IconButton>
                     }
                       </span>}
-                    </div>}
+                    </div>
+                    </div>
+                    }
                     subheader={DateParser(post?.date)}
                   />
                   {post?.itemData ? <CardMedia>
