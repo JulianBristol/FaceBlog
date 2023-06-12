@@ -88,5 +88,27 @@ export default makeStyles((theme) => ({
             marginLeft: '0px',
             marginRight: '0px',
         },
+    },
+    imgModal: {
+        width: '40vw',
+        margin: '10vh auto',
+        outline: 'none',
+        '@media (max-width: 1200px)': {
+            width: '60vw',
+        },
+        '@media (max-width: 800px)': {
+            width: '80vw',
+        },
+    },
+    imgModal_img:{
+        maxWidth: '40vw',
+        display: 'flex',
+        margin: '0 auto',
+        '@media (max-width: 1200px)': {
+            maxWidth: '60vw',
+        },
+        '@media (max-width: 800px)': {
+            maxWidth: '80vw',
+        },
     }
 }));
