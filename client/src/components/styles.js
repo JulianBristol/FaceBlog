@@ -157,6 +157,7 @@ export default makeStyles((theme) => ({
         marginTop: '15px',
         padding: '0 5px',
         borderRadius: '5px',
+        background: '#dfdfdf',
         '& a': {
             color: '#004285',
             textDecoration: 'none',
